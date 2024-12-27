@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        darkblue: '#0163D2',
+                        darkdarkblue: '#073B74',
+                        blue: '#00BAF2',
+                        lightblue: '#B4D7FF',
+                        lightgrey: '#F6F6F6',
+                        yellow: '#F1E64E',
+                        pink: '#F74B81',
+                        grey: '#bbb',
+                        darkgrey: '#717171',
+                        black: '#000',
+                        orange: '#F59758',
+                        lightPink: '#FFEFF4',
+
+
+                        lightlevendar: '#EFEFEF',
+                        lightblack: '#C3C3C3',
+                        green: '#00C14D',
+                        tan:'#FFEFB5',
+                        lightpurple:'#CCE0F6',
+
+
+                    },
+                    backgroundImage: {
+                        "bg1venderList": "url('./homeimg/Group 338363.png')",
+                    }
+
+                }
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- header  side bar start -->
+    <div class="fixed z-50">
+        <div class=" absolute  bg-black text-white w-40 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
+            id="sidebar">
+            <!-- Your Sidebar Content -->
+            <div class="p-4">
+                <h1 class="text-xl font-semibold">Sidebar</h1>
+                <ul class="mt-4 text-md">
+                    <li class="mb-2"><a href="/home.html" class="block hover:text-indigo-400">Home</a></li>
+                    <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Shops</a></li>
+                    <li class="mb-2"><a href="/Product/ProductMan.html" class="block hover:text-indigo-400">Products</a></li>
+                    <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Deals</a></li>
+                    <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Blog</a></li>
+                    <li class="mb-2"><a href="#" class="block hover:text-indigo-400">About Us</a></li>
+                    <li class="mb-2"><a href="/contactUs.html" class="block hover:text-indigo-400">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header side bar end -->
+
+
+  
+
+
+
+
+    <!-- header section start -->
+    <div class=" bg-gray-200">
+
+     
+
+        <!-- header div start -->
+        <div class="flex justify-between bg-lightgrey rounded-sm p-4	relative">
+            <div class="flex items-center  gap-2 sm:gap-6">
+                <svg id="open-sidebar" class=" block md:hidden	" xmlns="http://www.w3.org/2000/svg" width="2em"
+                    height="2em" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M4 18q-.425 0-.712-.288T3 17q0-.425.288-.712T4 16h16q.425 0 .713.288T21 17q0 .425-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12q0-.425.288-.712T4 11h16q.425 0 .713.288T21 12q0 .425-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7q0-.425.288-.712T4 6h16q.425 0 .713.288T21 7q0 .425-.288.713T20 8z" />
+                </svg>
+
+                <img class="w-36" src="../img/images/super duper.png" alt="">
+
+
+            </div>
+            <div id="mySidenav" class="  md:block  hidden">
+                <nav class="flex gap-4  mt-2">
+
+                    <a href="/home.html" class=" underline text-blue ">Home </a>
+                    <a href="#" class="hover:underline hover:text-blue "> Shops</a>
+                    <a href="/Product/ProductMan.html" class="hover:underline hover:text-blue ">Products</a>
+                    <a href="#" class="hover:underline hover:text-blue ">Deals</a>
+                    <a href="#" class="hover:underline hover:text-blue ">Blog</a>
+                    <a href="#" class="hover:underline hover:text-blue ">About Us</a>
+                    <a href="/contactUs.html" class="hover:underline hover:text-blue ">Contact Us</a>
+                </nav>
+            </div>
+
+
+
+          
+        <div class=" flex gap-1 items-center bg-darkblue text-white px-4 py-1 rounded-md">
+            <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024"><path fill="white" d="M868 732h-70.3c-4.8 0-9.3 2.1-12.3 5.8c-7 8.5-14.5 16.7-22.4 24.5a353.84 353.84 0 0 1-112.7 75.9A352.8 352.8 0 0 1 512.4 866c-47.9 0-94.3-9.4-137.9-27.8a353.84 353.84 0 0 1-112.7-75.9a353.28 353.28 0 0 1-76-112.5C167.3 606.2 158 559.9 158 512s9.4-94.2 27.8-137.8c17.8-42.1 43.4-80 76-112.5s70.5-58.1 112.7-75.9c43.6-18.4 90-27.8 137.9-27.8c47.9 0 94.3 9.3 137.9 27.8c42.2 17.8 80.1 43.4 112.7 75.9c7.9 7.9 15.3 16.1 22.4 24.5c3 3.7 7.6 5.8 12.3 5.8H868c6.3 0 10.2-7 6.7-12.3C798 160.5 663.8 81.6 511.3 82C271.7 82.6 79.6 277.1 82 516.4C84.4 751.9 276.2 942 512.4 942c152.1 0 285.7-78.8 362.3-197.7c3.4-5.3-.4-12.3-6.7-12.3m88.9-226.3L815 393.7c-5.3-4.2-13-.4-13 6.3v76H488c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h314v76c0 6.7 7.8 10.5 13 6.3l141.9-112a8 8 0 0 0 0-12.6"/></svg>
+            <button>Logout</button>
+        </div>
+        </div>
+    </div>
+    <!-- header div end -->
+
+
+   
+
+
+    <!-- main content div  start -->
+  <div>
+    <div class="   ">
+        <h3 class="bg-lightpurple h-60 font-bold text-white text-2xl text-center py-10">CONTACTS US</h3>
+<div class=" relative top-[-90px] flex flex-wrap justify-center gap-6">
+        <div class="bg-white text-center rounded-md shadow-md p-10 flex flex-col justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="blue" d="M12 2a9 9 0 0 1 9 9c0 3.074-1.676 5.59-3.442 7.395a20.441 20.441 0 0 1-2.876 2.416l-.426.29l-.2.133l-.377.24l-.336.205l-.416.242a1.874 1.874 0 0 1-1.854 0l-.416-.242l-.52-.32l-.192-.125l-.41-.273a20.638 20.638 0 0 1-3.093-2.566C4.676 16.589 3 14.074 3 11a9 9 0 0 1 9-9m0 2a7 7 0 0 0-7 7c0 2.322 1.272 4.36 2.871 5.996a18.03 18.03 0 0 0 2.222 1.91l.458.326c.148.103.29.199.427.288l.39.25l.343.209l.289.169l.455-.269l.367-.23c.195-.124.405-.263.627-.417l.458-.326a18.03 18.03 0 0 0 2.222-1.91C17.728 15.361 19 13.322 19 11a7 7 0 0 0-7-7m0 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8m0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4"/></g></svg>
+            <h3 class="pt-2">hello@gmail.com</h3>
+            <h3 class="pt-4">317S. 6th.</h3>
+            <h3>Las Vega,NV 89101</h3>
+            <h3>+91 1234567890</h3>
+        </div>
+        <div class="bg-white text-center rounded-md shadow-md p-10 flex flex-col justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="blue" d="M12 2a9 9 0 0 1 9 9c0 3.074-1.676 5.59-3.442 7.395a20.441 20.441 0 0 1-2.876 2.416l-.426.29l-.2.133l-.377.24l-.336.205l-.416.242a1.874 1.874 0 0 1-1.854 0l-.416-.242l-.52-.32l-.192-.125l-.41-.273a20.638 20.638 0 0 1-3.093-2.566C4.676 16.589 3 14.074 3 11a9 9 0 0 1 9-9m0 2a7 7 0 0 0-7 7c0 2.322 1.272 4.36 2.871 5.996a18.03 18.03 0 0 0 2.222 1.91l.458.326c.148.103.29.199.427.288l.39.25l.343.209l.289.169l.455-.269l.367-.23c.195-.124.405-.263.627-.417l.458-.326a18.03 18.03 0 0 0 2.222-1.91C17.728 15.361 19 13.322 19 11a7 7 0 0 0-7-7m0 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8m0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4"/></g></svg>
+            <h3 class="pt-2">hello@gmail.com</h3>
+            <h3 class="pt-4">317S. 6th.</h3>
+            <h3>Las Vega,NV 89101</h3>
+            <h3>+91 1234567890</h3>
+        </div>
+        <div class="bg-white text-center rounded-md shadow-md px-10 py-4 flex flex-col justify-center ">
+            
+            <h3 class="pt-2 font-bold">General Contacts</h3>
+            <h3 class="pt-2">Inquries <span class="text-darkblue">hello@gmail.com</span></h3>
+            <h3 class="pt-2">Careers <span class="text-darkblue">hello@gmail.com</span></h3>
+            <h3 class="pt-2">Media <span class="text-darkblue">hello@gmail.com</span></h3>
+            <h3 class="pt-2">Suport <span class="text-darkblue">hello@gmail.com</span></h3>
+            <h3>+91 1234567890</h3>
+            <div class="flex gap-4 pt-2">
+                <img class="h-8 w-8" src="./img/contact/Ellipse 493.png" alt="">
+                <img class="h-8 w-8" src="./img/contact/Ellipse 494.png" alt="">
+                <img class="h-8 w-8" src="./img/contact/Ellipse 495.png" alt="">
+                <img class="h-8 w-8" src="./img/contact/Ellipse 496.png" alt="">
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+    <h3 class="font-bold text-2xl text-center">Send us a Message</h3>
+
+    <div class="shadow-md rounded-md w-[80%] mx-auto p-10  ">
+    <div class="grid sm:grid-cols-2 grid-cols-1 gap-4 justify-center">
+        <div class="flex flex-col">
+            <label for="">First Name</label>
+        <input class="rounded-md " type="text">
+    </div>
+        <div class="flex flex-col">
+            <label for="">First Name</label>
+        <input class="rounded-md " type="text">
+    </div>
+        <div class="flex flex-col">
+            <label for="">First Name</label>
+        <input class="rounded-md " type="text">
+    </div>
+        <div class="flex flex-col">
+            <label for="">First Name</label>
+        <input class="rounded-md " type="text">
+    </div>
+</div>
+        <div class="flex flex-col w-full mt-2">
+            <label for="">First Name</label>
+       <textarea class="rounded-md" name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="flex justify-end mt-4">
+    <button class="rounded-md px-4 py-2 bg-darkblue text-sm text-white">Send Massage</button>
+    </div>
+</div>
+
+
+
+  </div>
+
+    <!-- main content div end -->
+
+
+
+    <!-- footer div start -->
+    <div class="  mt-10">
+
+        <footer class="p-4 bg-[#0163D2]  sm:p-6 dark:bg-gray-800">
+            <div class="md:flex md:justify-start md:items-center">
+
+                <div
+                    class="grid md:grid-cols-2 text-center md:text-left  grid-row-2 md:grid-rows-1 gap-8 sm:gap-6 xl:grid-cols-8   sm:gap-x-32">
+                    <div class="whitespace-nowrap">
+                        <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">About</h3>
+                        <ul>
+                            <div class="space-y-2 text-[.625rem] md:text-sm">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">About Us </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">Flipkart Stories</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">Press</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">Super Duper Wholesale</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">Corporate Information</a>
+                                </li>
+                            </div>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Help</h3>
+                        <ul>
+                            <div class="space-y-2 text-[.625rem] md:text-sm whitespace-nowrap">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Payments</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Shipping</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Cancellation &
+                                        Returns</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Report
+                                        Infringement</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white whitespace-nowrap">
+                            CONSUMER
+                            POLICY</h3>
+                        <ul>
+                            <div class="space-y-2 text-[.625rem] md:text-sm whitespace-nowrap">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Return Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Terms
+                                        &amp; Conditions</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Security</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Privacy</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Sitemap</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Grievance
+                                        Redressal</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">EPR
+                                        Compliance</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="after:relative	">
+                        <h3
+                            class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white after:content-[''] after:border-r-2 after:border-white after:py-40 after:absolute after:right-[52%] after:hidden xl:after:block">
+                            SOCIAL</h3>
+                        <ul>
+                            <div class="space-y-2 text-[.625rem] md:text-sm">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Twitter</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">YouTube</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="xl:translate-x-[-3.125rem] ">
+                        <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Company</h3>
+                        <ul>
+                            <div class="space-y-2 whitespace-nowrap  text-[.625rem] md:text-sm">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Super Duper
+                                        Internet Private Limited</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Buildings Alyssa,
+                                        Begonia & Clove Embassy Tech Village</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Outer Ring Road,
+                                        Devarabeesanahalli Village</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Bengaluru,
+                                        560103</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Karnataka,
+                                        India</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class=" xl:ml-32 	">
+                        <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Company</h3>
+                        <ul>
+                            <div class="space-y-2 whitespace-nowrap  text-[.625rem] md:text-sm">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">FacebSuper Duper
+                                        Internet Private <br> Limitedook</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Buildings Alyssa,
+                                        Begonia &</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Clove Embassy
+                                        Tech Village</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Outer Ring Road,
+                                        Devarabeesanahalli Village</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Bengaluru,
+                                        560103</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Karnataka,
+                                        India</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">CIN :
+                                        U51109KA2012PTC066107</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">textephone:
+                                        044-45614700</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <hr class="my-6 border-gray-200 sm:mx-auto  dark:border-gray-700 lg:mt-20">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <div
+                    class="spandivfooter text-white flex md:gap-3 items-center xl:text-lg text-sm pl-2 flex-col gap-4 sm:grid sm:grid-cols-1 md:grid-cols-2  sm:place-items-start sm:whitespace-nowrap lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-6 md:gap-x-[32px]">
+                    <span class="">
+                        <i class="fa-solid fa-suitcase scale-125 mr-2" style="color: #FFD43B;"></i>
+                        Become a Seller </span>
+                    <span class="flex gap-2 items-center justify-center">
+                        <img src="./imges/starimage.png" class=" w-5" alt="">
+                        Advertise </span>
+                    <span class="flex gap-2 items-center">
+                        <img src="./imges/giftimage.png" alt="">
+                        Gift Cards
+                    </span>
+                    <span class="flex gap-2 items-center">
+                        <img src="./imges/questionimage.png" class="w-5" alt="">
+                        Help Center
+                    </span>
+                </div>
+                <div
+                    class="smallimagediv flex md:gap-8 items-center flex-col gap-4 sm:flex-row lg:flex-col lg:w-[50%] xl:flex-row">
+                    <span class="text-white text-sm xl:text-[16px] sm:text-center">© 2007-2023 Superduper.com</span>
+
+                    <div class="imagedivnew">
+                        <img src="./imges/ATMimages.png" class="w-80" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- footer div end -->
+
+
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+
+        const maincontent = document.getElementById('main-content');
+        const openSidebarButton = document.getElementById('open-sidebar');
+        openSidebarButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sidebar.classList.toggle('-translate-x-full');
+            maincontent.style.position = 'fixed';
+        });
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
+                sidebar.classList.add('-translate-x-full');
+                maincontent.style.position = 'static';
+            }
+        });
+
+
+       
+
+        // person profile
+        const navsidepage = document.getElementById('navsidepage');
+        const profile = document.getElementById('profile');
+
+
+        profile.addEventListener('click', (e) => {
+
+
+            if (navsidepage.style.display == "block") {
+                navsidepage.style.display = "none";
+            }
+            else {
+                navsidepage.style.display = "block";
+
+            }
+
+        });
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!navsidepage.contains(e.target) && !profile.contains(e.target)) {
+
+                navsidepage.style.display = "none";
+
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                blue:'#00BAF2',
+                lightgrey:'#F6F6F6',
+                yellow:'#F1E64E',
+                pink:'#F74B81',
+                
+              },
+              backgroundImage:{
+                "bg-phone":"url('./imges/Rectangle 4195.png')",
+                "bg-gift":"url('./imges/Vector 94.png')",
+                "bg-gift-right":"url('./imges/Vector 95.png')",
+              }
+            
+            }
+          }
+        }
+      </script>
+
+
+    <title>Document</title>
+</head>
+<body class="box-border">
+    <!-- header div start -->
+    <div class="flex justify-between bg-lightgrey rounded-sm p-4	relative">
+        <div class="flex items-center gap-8">
+        <img  src="./img/images/super duper.png" alt="">
+       
+        <svg onclick="openNav()" class=" block lg:hidden	" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="M4 18q-.425 0-.712-.288T3 17q0-.425.288-.712T4 16h16q.425 0 .713.288T21 17q0 .425-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12q0-.425.288-.712T4 11h16q.425 0 .713.288T21 12q0 .425-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7q0-.425.288-.712T4 6h16q.425 0 .713.288T21 7q0 .425-.288.713T20 8z"/></svg>
+
+
+        <div id="navsidepage" class=" hidden absolute top-16 left-40 z-30 bg-white  px-10 py-4 rounded-md"  >
+          <svg class="float-right mb-4" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m10.25 5.75l-4.5 4.5m0-4.5l4.5 4.5"/><circle cx="8" cy="8" r="6.25"/></g></svg>
+          <nav class="flex gap-4 text-xl mt-2 flex-col"> 
+          <a href="#" class=" underline text-blue ">Home </a>
+          <a href="#" class="hover:underline hover:text-blue "> Shops</a>
+          <a href="#" class="hover:underline hover:text-blue ">Products</a>
+          <a href="#" class="hover:underline hover:text-blue ">Deals</a>
+          <a href="#" class="hover:underline hover:text-blue ">Blog</a>
+          <a href="#" class="hover:underline hover:text-blue ">About Us</a>
+          <a href="#" class="hover:underline hover:text-blue ">Contact Us</a>
+        </nav>
+        </div>
+    </div>
+    <div id="mySidenav" class="  lg:block  hidden" >
+        <nav class="flex gap-4 text-xl mt-2">
+         
+            <a href="#" class=" underline text-blue ">Home </a>
+            <a href="#" class="hover:underline hover:text-blue "> Shops</a>
+            <a href="#" class="hover:underline hover:text-blue ">Products</a>
+            <a href="#" class="hover:underline hover:text-blue ">Deals</a>
+            <a href="#" class="hover:underline hover:text-blue ">Blog</a>
+            <a href="#" class="hover:underline hover:text-blue ">About Us</a>
+            <a href="#" class="hover:underline hover:text-blue ">Contact Us</a>
+        </nav>
+    </div>
+
+ 
+  
+        <div class="flex gap-4 text-blue mt-2 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 48 48"><g fill="none"><path d="M39 32H13L8 12h36z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M3 6h3.5L8 12m0 0l5 20h26l5-20z"/><circle cx="13" cy="39" r="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/><circle cx="39" cy="39" r="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/></g></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 15 15"><path fill="currentColor" d="M5 5.5a2.5 2.5 0 1 1 5 0a2.5 2.5 0 0 1-5 0"/><path fill="currentColor" fill-rule="evenodd" d="M7.5 0a7.5 7.5 0 1 0 0 15a7.5 7.5 0 0 0 0-15M1 7.5a6.5 6.5 0 1 1 10.988 4.702A3.5 3.5 0 0 0 8.5 9h-2a3.5 3.5 0 0 0-3.488 3.202A6.482 6.482 0 0 1 1 7.5" clip-rule="evenodd"/></svg>
+        </div>
+    </div>
+     <!-- header div end -->
+     <!-- 2nd header starts -->
+     <div class="secondheaderstarts">
+
+      <!--  -->
+      
+     </div>
+
+
+     <!-- main body starts -->
+
+     <div class="formpagesstarts  flex justify-center flex-col gap-11 h-96 items-center px-4 md:px-0 sm:mt-10 mt-6">
+
+
+      <div class="formdiv  md:w-4/5 lg:w-3/5 md:px-10 w-full flex flex-col justify-center items-center gap-12 bg-white shadow-lg h-96 mt-36 pt-64 pb-[260.8px] md:py-56 sm:pb-[304px] md:pb-[176px] md:pt-64">
+        <label for="" class="sm:text-xl md:text-lg lg:text-3xl font-bold mt-20 sm:mt-36 md:mt-1">Let’s Get Started</label>
+        <!--  -->
+        <div class="flex gap-10 flex-col md:flex-row justify-center items-center ml-6 md:ml-0 sm:w-full ">
+          <div class="inputBox flex justify-center  relative h-14 w-5/6 mr-7 sm:mr-0 ">
+            <span class="translate-x-10 translate-y-5 text-gray-400"></span>
+            <input required="" type="text"   class="[&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-black border text-[1em]  py-[.9375rem] rounded-[.3125rem] w-full overflow-hidden">
+            <span class="absolute text-[0.7em] translate-x-[1.25rem] translate-y-[-0.4688rem] tracking-[.0625rem]  text-black pl-[.3125rem] pr-1.5 pt-0 pb-px rounded-sm border-solid  left-0 bg-white">First Name</span>
+          </div>
+          <div class="inputBox flex justify-center  relative h-14 w-5/6 mr-7 sm:mr-0 ">
+            <span class="translate-x-10 translate-y-5 text-gray-400"></span>
+            <input required="" type="text"   class="[&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-black border text-[1em]  py-[.9375rem] rounded-[.3125rem] w-full overflow-hidden">
+            <span class="absolute text-[0.7em] translate-x-[1.25rem] translate-y-[-0.4688rem] tracking-[.0625rem]  text-black pl-[.3125rem] pr-1.5 pt-0 pb-px rounded-sm border-solid  left-0 bg-white">Last Name</span>
+          </div>
+        </div>
+        <div class="flex gap-10 flex-col md:flex-row justify-center items-center ml-6 md:ml-0 sm:w-full ">
+          <div class="inputBox flex justify-center  relative h-14 w-5/6 mr-7 sm:mr-0 ">
+            <span class="translate-x-10 translate-y-5 text-gray-400"></span>
+            <input required="" type="email"   class="[&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-black border text-[1em]  py-[.9375rem] rounded-[.3125rem] w-full overflow-hidden">
+            <span class="absolute text-[0.7em] translate-x-[1.25rem] translate-y-[-0.4688rem] tracking-[.0625rem]  text-black pl-[.3125rem] pr-1.5 pt-0 pb-px rounded-sm border-solid  left-0 bg-white">Email</span>
+          </div>
+          <div class="inputBox flex justify-center  relative h-14 w-5/6 mr-7 sm:mr-0 ">
+            <span class="translate-x-10 translate-y-5 text-gray-400"></span>
+            <input required="" type="password"   class="[&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-black border text-[1em]  py-[.9375rem] rounded-[.3125rem] w-full overflow-hidden">
+            <span class="absolute text-[0.7em] translate-x-[1.25rem] translate-y-[-0.4688rem] tracking-[.0625rem]  text-black pl-[.3125rem] pr-1.5 pt-0 pb-px rounded-sm border-solid  left-0 bg-white">Password</span>
+          </div>
+        </div>
+        <div class="buttondiv w-full  flex justify-center translate-y-[-3.4375rem]  p-5  sm:mt-2 md:mt-10 sm:mb-4">
+          <a href="/home.html" class="w-full flex items-center justify-center">
+            <button class=" text-xl shadow-[2px_2px_4px_rgba(0,0,0,0.4)] sm:w-2/4  text-white  px-[2em] py-[0.5em] border-[transparent] active:translate-x-[0em] active:translate-y-[0.2em] bg-[#0163d2] rounded-lg"> Signup
+            </button>
+          </a>
+        </div>
+
+      </div>
+
+   
+
+
+
+     </div>
+     <div class="  mt-40">
+
+      <footer class="p-4 bg-[#0163D2]  sm:p-6 dark:bg-gray-800">
+        <div class="md:flex md:justify-start md:items-center">
+  
+          <div class="grid md:grid-cols-2 text-center md:text-left  grid-row-2 md:grid-rows-1 gap-8 sm:gap-6 xl:grid-cols-8   sm:gap-x-32">
+            <div class="whitespace-nowrap">
+              <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">About</h3>
+              <ul>
+                <div class="space-y-2 text-[.625rem] md:text-sm">
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" rel="nofollow"
+                      class="text-white hover:underline dark:text-gray-400">About Us </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" rel="nofollow"
+                      class="text-white hover:underline dark:text-gray-400">Careers</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" rel="nofollow"
+                      class="text-white hover:underline dark:text-gray-400">Flipkart Stories</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" rel="nofollow"
+                      class="text-white hover:underline dark:text-gray-400">Press</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" rel="nofollow"
+                      class="text-white hover:underline dark:text-gray-400">Super Duper Wholesale</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" rel="nofollow"
+                      class="text-white hover:underline dark:text-gray-400">Corporate Information</a>
+                  </li>
+                </div>
+  
+              </ul>
+            </div>
+            <div>
+              <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Help</h3>
+              <ul>
+                <div class="space-y-2 text-[.625rem] md:text-sm whitespace-nowrap">
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Payments</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Shipping</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Cancellation &
+                      Returns</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Report
+                      Infringement</a>
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div class="">
+              <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white whitespace-nowrap">CONSUMER
+                POLICY</h3>
+              <ul>
+                <div class="space-y-2 text-[.625rem] md:text-sm whitespace-nowrap">
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Return Policy</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Terms
+                      &amp; Conditions</a>
+                  </li>
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Security</a>
+                  </li>
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Privacy</a>
+                  </li>
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Sitemap</a>
+                  </li>
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Grievance
+                      Redressal</a>
+                  </li>
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">EPR
+                      Compliance</a>
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div class="after:relative	">
+              <h3
+                class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white after:content-[''] after:border-r-2 after:border-white after:py-40 after:absolute after:right-[52%] after:hidden xl:after:block">
+                SOCIAL</h3>
+              <ul>
+                <div class="space-y-2 text-[.625rem] md:text-sm">
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Facebook</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Twitter</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">YouTube</a>
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div class="xl:translate-x-[-3.125rem] ">
+              <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Company</h3>
+              <ul>
+                <div class="space-y-2 whitespace-nowrap  text-[.625rem] md:text-sm">
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Super Duper
+                      Internet Private Limited</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Buildings Alyssa,
+                      Begonia & Clove Embassy Tech Village</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Outer Ring Road,
+                      Devarabeesanahalli Village</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Bengaluru,
+                      560103</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Karnataka,
+                      India</a>
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div class=" xl:ml-32 	">
+              <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Company</h3>
+              <ul>
+                <div class="space-y-2 whitespace-nowrap  text-[.625rem] md:text-sm">
+                  <li class="">
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">FacebSuper Duper
+                      Internet Private <br> Limitedook</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Buildings Alyssa,
+                      Begonia &</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Clove Embassy
+                      Tech Village</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Outer Ring Road,
+                      Devarabeesanahalli Village</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Bengaluru,
+                      560103</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Karnataka,
+                      India</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">CIN :
+                      U51109KA2012PTC066107</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">textephone:
+                      044-45614700</a>
+                  </li>
+                </div>
+              </ul>
+            </div>
+  
+  
+          </div>
+        </div>
+  
+        <hr class="my-6 border-gray-200 sm:mx-auto  dark:border-gray-700 lg:mt-20">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <div class="spandivfooter text-white flex md:gap-3 items-center xl:text-lg text-sm pl-2 flex-col gap-4 sm:grid sm:grid-cols-1 md:grid-cols-2  sm:place-items-start sm:whitespace-nowrap lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-6 md:gap-x-[32px]">
+            <span class="">
+                           <i class="fa-solid fa-suitcase scale-125 mr-2" style="color: #FFD43B;"></i>
+             Become a Seller  </span>
+            <span class="flex gap-2 items-center justify-center">
+              <img src="./imges/starimage.png" class=" w-5" alt="">
+               Advertise  </span>
+            <span class="flex gap-2 items-center">
+             <img src="./imges/giftimage.png" alt="">
+             Gift Cards
+             </span>
+            <span class="flex gap-2 items-center">
+             <img src="./imges/questionimage.png" class="w-5" alt="">
+             Help Center
+             </span>
+          </div>
+          <div class="smallimagediv flex md:gap-8 items-center flex-col gap-4 sm:flex-row lg:flex-col lg:w-[50%] xl:flex-row">
+            <span class="text-white text-sm xl:text-[16px] sm:text-center">© 2007-2023 Superduper.com</span>
+  
+            <div class="imagedivnew">
+              <img src="./imges/ATMimages.png" class="w-80" alt="">
+            </div>
+           </div>
+        </div>
+      </footer>
+  
+  
+    </div>
+
+
+
+
+<script src="./header.js"></script>
+
+</body>
+</html>
+
+

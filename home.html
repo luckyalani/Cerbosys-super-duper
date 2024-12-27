@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../../assets/vendor/slick-carousel/slick/slick.css">
+  <script src="../../assets/vendor/slick-carousel/slick/slick.js"></script>
+  <script src="../../assets/js/helpers/hs.slick-carousel.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            darkblue: '#0163D2',
+            darkdarkblue:'#073B74',
+            blue: '#00BAF2',
+            lightblue:'#B4D7FF',
+            lightgrey: '#F6F6F6',
+            yellow: '#F1E64E',
+            pink: '#F74B81',
+            grey: '#bbb',
+            darkgrey: '#717171',
+            black: '#000',
+            orange: '#F59758',
+            lightPink: '#FFEFF4',
+
+          },
+          backgroundImage: {
+           "bg1venderList": "url('./img/homeimg/Group 338363.png')",
+          }
+        }
+      }
+    }
+  
+    </script>
+  <script src="jquery.min.js"></script>
+  <script src="owlcarousel/owl.carousel.min.js"></script>
+  <style>
+    #owl-demo .item {
+      margin: 3px;
+    }
+
+    #owl-demo .item img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  </style>
+
+  <title>Document</title>
+</head>
+
+<body class="" id="main-content">
+  <!-- side bar start -->
+  <div class="fixed z-50">
+  <div
+  class=" absolute  bg-black text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
+  id="sidebar">
+  <!-- Your Sidebar Content -->
+  <div class="p-4">
+    <h1 class="text-2xl font-semibold">Sidebar</h1>
+    <ul class="mt-4 text-xl">
+      <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Home</a></li>
+      <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Shops</a></li>
+      <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Products</a></li>
+      <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Deals</a></li>
+      <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Blog</a></li>
+      <li class="mb-2"><a href="#" class="block hover:text-indigo-400">About Us</a></li>
+      <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+  <!-- header div start -->
+  <div class=" bg-gray-200 ">
+   
+    <!-- headw -->
+
+    <!-- header div start -->
+    <div class="flex justify-between bg-lightgrey rounded-sm p-4	relative">
+      <div class="flex items-center  gap-2 sm:gap-8">
+        <img class="w-36" src="./img/images/super duper.png" alt="">
+
+        <svg id="open-sidebar" class=" block md:hidden	" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
+          viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M4 18q-.425 0-.712-.288T3 17q0-.425.288-.712T4 16h16q.425 0 .713.288T21 17q0 .425-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12q0-.425.288-.712T4 11h16q.425 0 .713.288T21 12q0 .425-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7q0-.425.288-.712T4 6h16q.425 0 .713.288T21 7q0 .425-.288.713T20 8z" />
+        </svg>
+
+      </div>
+      <div id="mySidenav" class="  md:block  hidden">
+        <nav class="flex gap-4  mt-2">
+
+          <a href="/home.html" class=" hover:underline hover:text-blue ">Home </a>
+          <a href="#" class="hover:underline hover:text-blue "> Shops</a>
+          <a href="/Product/ProductMan.html" class="hover:underline hover:text-blue ">Products</a>
+          <a href="#" class="hover:underline hover:text-blue ">Deals</a>
+          <a href="#" class="hover:underline hover:text-blue ">Blog</a>
+          <a href="#" class="hover:underline hover:text-blue ">About Us</a>
+          <a href="/contactUs.html" class="hover:underline hover:text-blue ">Contact Us</a>
+        </nav>
+      </div>
+
+
+
+      <div class="flex gap-4 text-blue mt-2 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 48 48">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+            d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8" />
+        </svg>
+<a href="/cart/cart.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 48 48">
+          <g fill="none">
+            <path d="M39 32H13L8 12h36z" />
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+              d="M3 6h3.5L8 12m0 0l5 20h26l5-20z" />
+            <circle cx="13" cy="39" r="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="4" />
+            <circle cx="39" cy="39" r="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="4" />
+          </g>
+        </svg>
+      </a>
+
+        <svg id="profile" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 15 15">
+          <path fill="currentColor" d="M5 5.5a2.5 2.5 0 1 1 5 0a2.5 2.5 0 0 1-5 0" />
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M7.5 0a7.5 7.5 0 1 0 0 15a7.5 7.5 0 0 0 0-15M1 7.5a6.5 6.5 0 1 1 10.988 4.702A3.5 3.5 0 0 0 8.5 9h-2a3.5 3.5 0 0 0-3.488 3.202A6.482 6.482 0 0 1 1 7.5"
+            clip-rule="evenodd" />
+        </svg>
+
+        <!-- profile side bar div start -->
+        <div id="navsidepage" class=" hidden absolute top-16 right-0 z-30 bg-white pl-4 pr-10 py-4 rounded-md">
+
+          <nav class="flex gap-4  mt-2 flex-col text-black">
+            <div class="flex items-center gap-4  hover:text-pink">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                  <path d="M16 9a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-2 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0" />
+                  <path
+                    d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1M3 12c0 2.09.713 4.014 1.908 5.542A8.986 8.986 0 0 1 12.065 14a8.984 8.984 0 0 1 7.092 3.458A9 9 0 1 0 3 12m9 9a8.963 8.963 0 0 1-5.672-2.012A6.992 6.992 0 0 1 12.065 16a6.991 6.991 0 0 1 5.689 2.92A8.964 8.964 0 0 1 12 21" />
+                </g>
+              </svg>
+              <a href="/profilepage.html" class="  ">My Profile </a>
+            </div>
+            <div class="flex items-center gap-4  hover:text-pink">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+                  d="m15.578 3.382l2 1.05c2.151 1.129 3.227 1.693 3.825 2.708C22 8.154 22 9.417 22 11.942v.117c0 2.524 0 3.787-.597 4.801c-.598 1.015-1.674 1.58-3.825 2.709l-2 1.049C13.822 21.539 12.944 22 12 22s-1.822-.46-3.578-1.382l-2-1.05c-2.151-1.129-3.227-1.693-3.825-2.708C2 15.846 2 14.583 2 12.06v-.117c0-2.525 0-3.788.597-4.802c.598-1.015 1.674-1.58 3.825-2.708l2-1.05C10.178 2.461 11.056 2 12 2s1.822.46 3.578 1.382ZM21 7.5l-4 2M12 12L3 7.5m9 4.5v9.5m0-9.5l4.5-2.25l.5-.25m0 0V13m0-3.5l-9.5-5" />
+              </svg>
+              <a href="/orderpage/orderDelivered.html" class=" "> Orders</a>
+            </div>
+            <div class="flex items-center gap-4  hover:text-pink">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                  d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8" />
+              </svg>
+              <a href="#" class=" hover:text-pink ">Wishlist (9)</a>
+            </div>
+            <div class="flex items-center gap-4  hover:text-pink">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m11.496 1.19l10.506.808l.808 10.505l-10.932 10.932L.564 12.121zm.764 2.064l-8.867 8.867l8.485 8.486l8.867-8.868l-.606-7.879zm3.86 4.624a1 1 0 1 0-1.414 1.414a1 1 0 0 0 1.414-1.414m-2.828-1.414a3 3 0 1 1 4.243 4.242a3 3 0 0 1-4.243-4.242" />
+              </svg>
+              <a href="#" class=" hover:text-pink ">Coupons</a>
+            </div>
+            <div class="flex items-center gap-4  hover:text-pink">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                <path fill="currentColor"
+                  d="M1 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2zm12 7a1 1 0 0 0 1-1V8H6.707l1.147 1.146a.5.5 0 1 1-.708.708L6 8.707V12zM7.915 7H14V5a1 1 0 0 0-1-1H6v1.085A1.5 1.5 0 0 1 7.915 7M6.5 7a.5.5 0 1 0-.5-.5V7zM5 5.085V4H3a1 1 0 0 0-1 1v2h1.085A1.5 1.5 0 0 1 5 5.085M4.5 7H5v-.5a.5.5 0 1 0-.5.5m-.207 1H2v3a1 1 0 0 0 1 1h2V8.707L3.854 9.854a.5.5 0 0 1-.708-.708z" />
+              </svg>
+              <a href="#" class=" hover:text-pink ">Gift Cards</a>
+            </div>
+            <div class="flex items-center gap-4  hover:text-pink">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M6 19v-9a6 6 0 0 1 6-6v0a6 6 0 0 1 6 6v9M6 19h12M6 19H4m14 0h2m-9 3h2" />
+                  <circle cx="12" cy="3" r="1" />
+                </g>
+              </svg>
+              <a href="#" class=" hover:text-pink ">Notifications</a>
+            </div>
+            <div class="flex items-center gap-4  hover:text-pink">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m17 8l-1.41 1.41L17.17 11H9v2h8.17l-1.58 1.58L17 16l4-4zM5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h7v-2H5z" />
+              </svg>
+              <a href="#" class=" hover:text-pink ">Logout</a>
+            </div>
+          </nav>
+        </div>
+        <!-- profile side bar div end -->
+      </div>
+    </div>
+  </div>
+  <!-- header div end -->
+
+  <!-- second header div start -->
+  <div class="flex flex-wrap items-center justify-between md:justify-end gap-4 lg:gap-60  bg-blue rounded-sm p-4">
+
+
+    <!-- serch and all categories div start -->
+    <div class=" flex  relative bg-white md:w-96 h-14 rounded-sm">
+      <select name="" id="" class="border-0 focus:ring-0 rounded-full ">
+        <option value="">All categories</option>
+      </select>
+      <input type="text" placeholder="search for items..." class="  border-0  focus:ring-0	" />
+      <svg class="absolute right-2 top-2" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
+        viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor">
+          <circle cx="11" cy="11" r="6" />
+          <path stroke-linecap="round" d="m20 20l-3-3" />
+        </g>
+      </svg>
+
+    </div>
+    <!-- serch and all categories div end -->
+
+    <div class="flex items-center">
+      <div class="flex flex-col text-yellow">
+        <span>1900-1888</span>
+        <span>24/7 Support Center</span>
+      </div>
+      <img src="./img/images/Group 338298.png" alt="">
+    </div>
+
+  </div>
+
+
+
+  <div class="p-4" >
+  <!-- insta images div start -->
+  <div class="relative w-full glide-05 px-4 py-10">
+    <!-- Slides -->
+    <div class="overflow-hidden" data-glide-el="track">
+      <ul
+        class="relative w-full overflow-hidden  whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338777.png" />
+          <span>Grocery</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338778.png" />
+          <span>Mobiles</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338779.png" />
+          <span>Fashion</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338780.png" />
+          <span>Electronics</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338781.png" />
+          <span>Furniture</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338782.png" />
+          <span>Appliances</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338777.png" />
+          <span>Grocery</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338783.png" />
+          <span>Travel</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338777.png" />
+          <span>Toys</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338785.png" />
+          <span>Two Wheelers</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="./img/homeimg/Group 338777.png" />
+          <span>Grocery</span>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+  <!-- insta images div end -->
+
+
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container w-full relative m-auto px-4">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade hidden">
+        <!-- <div class="numbertext">1 / 3</div> -->
+        <img src="./img/homeimg/Rectangle 4321 (1).png" class="w-full h-96">
+        <!-- <div class="text">Caption Text</div> -->
+      </div>
+
+      <div class="mySlides fade">
+        <!-- <div class="numbertext">2 / 3</div> -->
+        <img src="./img/homeimg/Rectangle 4321.png" class="w-full h-96">
+        <!-- <div class="text">Caption Two</div> -->
+      </div>
+
+      <div class="mySlides fade">
+        <!-- <div class="numbertext">3 / 3</div> -->
+        <img src="./img/homeimg/Rectangle 4321 (1).png" class="w-full h-96">
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev  absolute top-[25%] left-0 w-auto my-20   text-white text-4xl bg-pink px-4 py-1 rounded-md "
+        onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next absolute top-[25%] right-0 w-auto my-20  text-white text-4xl bg-pink px-4 py-1 rounded-md"
+        onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+    <br>
+
+    <!-- The dots/circles -->
+    <div class="flex justify-center">
+      <span class="dot h-5 w-5 bg-grey hover:bg-darkgrey mx-2 rounded-full" onclick="currentSlide(1)"></span>
+      <span class="dot h-5 w-5 bg-grey hover:bg-darkgrey mx-2 rounded-full" onclick="currentSlide(2)"></span>
+      <span class="dot h-5 w-5 bg-grey hover:bg-darkgrey mx-2 rounded-full" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <!-- 3 images div start -->
+    <div class="flex gap-6 lg:justify-between justify-center py-4 lg:px-10 px-2 object-cover lg:flex-nowrap flex-wrap">
+      <img class="w-80" src="./imges/Rectangle 4253.png" alt="">
+      <img class="w-80" src="./imges/Rectangle 4254.png" alt="">
+      <img class="w-80" src="./imges/Rectangle 4255.png" alt="">
+    </div>
+    <!-- 3 images div end -->
+
+    <!-- vender list div start -->
+
+    <!-- heading  -->
+    <h1 class="text-4xl font-bold text-center pt-4">vender list</h1>
+    <div class="flex justify-center items-center text-blue py-3">
+      <div class="w-20 border-b-2 border-blue"></div>
+      <i class="fa-solid fa-circle text-[8px] bg-black h-3 w-3 rounded-full"></i>
+      <div class="w-20 border-b-2 border-blue"></div>
+    </div>
+
+    <!-- vender list imges and content start -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 px-4 py-4  ">
+      <div class="bg-bg1venderList bg-no-repeat py-6 px-4  text-white  text-center  ">
+        <div class="w-64 lg:w-80 md:w-44 flex flex-col gap-2 items-center h-full justify-center ">
+          <h3 class="text-2xl font-bold">Super Duper</h3>
+          <h3 class="">Country/City Name</h3>
+          <p class="text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s,</p>
+        </div>
+      </div>
+      <div class="bg-bg1venderList bg-no-repeat  py-6  px-4  text-white  text-center   ">
+        <div class="w-64 lg:w-80 md:w-44 flex  flex-wrap flex-col gap-2 h-full  items-center justify-center ">
+          <h3 class="text-2xl font-bold">Store Name</h3>
+          <h3 class="">Country/City Name</h3>
+          <p class="text-xs text-wrap">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+        </div>
+      </div>
+      <div class="shadow-md rounded-md    flex flex-col gap-4  row-span-2 relative ">
+        <img src="./img/homeimg/Rectangle 4267.png" alt="">
+        <div class="absolute lg:top-[60%]  top-[40%] right-10 text-white bg-blue rounded-full p-2 ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+              d="m10 17l5-5m0 0l-5-5" />
+          </svg>
+        </div>
+        <div class="flex flex-col gap-2 px-2 pb-6">
+          <h3 class="text-2xl font-semibold">Store Name</h3>
+          <h3>Country/City Name </h3>
+          <p class="text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s,</p>
+        </div>
+      </div>
+      <div class="bg-bg1venderList bg-no-repeat py-6 px-4  text-white  text-center  ">
+        <div class=" lg:w-80 md:w-44 w-44 flex flex-col gap-2 h-full items-center justify-center">
+          <h3 class="text-2xl font-bold">Store Name</h3>
+          <h3 class="">Country/City Name</h3>
+          <p class="text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s,</p>
+        </div>
+      </div>
+      <div class="bg-bg1venderList bg-no-repeat py-6   px-4  text-white  text-center  ">
+        <div class="w-64 lg:w-80 md:w-44 flex flex-col gap-2 h-full items-center justify-center">
+          <h3 class="text-2xl font-bold">Store Name</h3>
+          <h3 class="">Country/City Name</h3>
+          <p class="text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s,</p>
+        </div>
+      </div>
+    </div>
+    <!-- vender list div END -->
+
+    <!-- New Arrivals  div start   -->
+    <!-- heading  -->
+    <h1 class="text-4xl font-bold text-center pt-4">New Arrivals</h1>
+    <div class="flex justify-center items-center text-blue py-3">
+      <div class="w-20 border-b-2 border-blue"></div>
+      <i class="fa-solid fa-circle text-[8px] bg-black h-3 w-3 rounded-full"></i>
+      <div class="w-20 border-b-2 border-blue"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+      <div class="flex flex-col gap-2 justify-center items-center border-2 py-4 rounded-sm px-4">
+        <img src="./img/homeimg/image 34.png" alt="">
+        <h3 class="text-center font-bold   ">Smart phone & tablet</h3>
+        <div class="flex text-yellow">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+        </div>
+        <h3 class="text-pink font-bold text-xl">$50.00</h3>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-2 border-2 px-1 text-darkgrey rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+              <circle cx="32.961" cy="81.02" r="5.889" fill="currentColor" />
+              <circle cx="74.309" cy="81.02" r="5.889" fill="currentColor" />
+              <path fill="currentColor"
+                d="M73.513 55.216a3.443 3.443 0 0 0 3.11-1.978l.003.002l14.589-25.27l-.018-.01c.214-.449.344-.946.344-1.477a3.451 3.451 0 0 0-3.452-3.452h-53.59v-6.488a3.451 3.451 0 0 0-3.452-3.452H12.186v.028c-.092-.008-.181-.028-.275-.028a3.44 3.44 0 0 0-3.41 3.035h-.042v3.452a3.451 3.451 0 0 0 3.452 3.452c.094 0 .183-.021.275-.028v.028h12.373v43.733h.001a3.45 3.45 0 0 0 3.451 3.442h59.256v-.085a3.433 3.433 0 0 0 3.185-2.922h.049v-.49l.002-.018l-.002-.018V63.67l.002-.018a3.44 3.44 0 0 0-3.236-3.429v-.022H34.498v-4.988h39.015z" />
+            </svg>
+            <span>Add To Cart</span>
+          </button>
+          <button class="border-2 px-1 rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+              <path
+                d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12" />
+            </svg>
+          </button>
+          <button class="border-2 px-1 text-darkgrey rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+              <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="32"
+                d="m400 304l48 48l-48 48m0-288l48 48l-48 48M64 352h128l60-92" />
+              <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="32"
+                d="M64 160h128l128 192h96m0-192h-96l-32 48" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 justify-center items-center border-2 py-4 rounded-sm px-4">
+        <img src="./img/homeimg/image 35.png" alt="">
+        <h3 class="text-center font-bold   ">Smart phone & tablet</h3>
+        <div class="flex text-yellow">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+        </div>
+        <h3 class="text-pink font-bold text-xl">$50.00</h3>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-2 border-2 px-1 text-darkgrey rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+              <circle cx="32.961" cy="81.02" r="5.889" fill="currentColor" />
+              <circle cx="74.309" cy="81.02" r="5.889" fill="currentColor" />
+              <path fill="currentColor"
+                d="M73.513 55.216a3.443 3.443 0 0 0 3.11-1.978l.003.002l14.589-25.27l-.018-.01c.214-.449.344-.946.344-1.477a3.451 3.451 0 0 0-3.452-3.452h-53.59v-6.488a3.451 3.451 0 0 0-3.452-3.452H12.186v.028c-.092-.008-.181-.028-.275-.028a3.44 3.44 0 0 0-3.41 3.035h-.042v3.452a3.451 3.451 0 0 0 3.452 3.452c.094 0 .183-.021.275-.028v.028h12.373v43.733h.001a3.45 3.45 0 0 0 3.451 3.442h59.256v-.085a3.433 3.433 0 0 0 3.185-2.922h.049v-.49l.002-.018l-.002-.018V63.67l.002-.018a3.44 3.44 0 0 0-3.236-3.429v-.022H34.498v-4.988h39.015z" />
+            </svg>
+            <span>Add To Cart</span>
+          </button>
+          <button class="border-2 px-1 rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+              <path
+                d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12" />
+            </svg>
+          </button>
+          <button class="border-2 px-1 text-darkgrey rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+              <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="32"
+                d="m400 304l48 48l-48 48m0-288l48 48l-48 48M64 352h128l60-92" />
+              <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="32"
+                d="M64 160h128l128 192h96m0-192h-96l-32 48" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 justify-center items-center border-2 py-4 rounded-sm px-4">
+        <img src="./img/homeimg/image 36.png" alt="">
+        <h3 class="text-center font-bold   ">Smart phone & tablet</h3>
+        <div class="flex text-yellow">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+        </div>
+        <h3 class="text-pink font-bold text-xl">$50.00</h3>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-2 border-2 px-1 text-darkgrey rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+              <circle cx="32.961" cy="81.02" r="5.889" fill="currentColor" />
+              <circle cx="74.309" cy="81.02" r="5.889" fill="currentColor" />
+              <path fill="currentColor"
+                d="M73.513 55.216a3.443 3.443 0 0 0 3.11-1.978l.003.002l14.589-25.27l-.018-.01c.214-.449.344-.946.344-1.477a3.451 3.451 0 0 0-3.452-3.452h-53.59v-6.488a3.451 3.451 0 0 0-3.452-3.452H12.186v.028c-.092-.008-.181-.028-.275-.028a3.44 3.44 0 0 0-3.41 3.035h-.042v3.452a3.451 3.451 0 0 0 3.452 3.452c.094 0 .183-.021.275-.028v.028h12.373v43.733h.001a3.45 3.45 0 0 0 3.451 3.442h59.256v-.085a3.433 3.433 0 0 0 3.185-2.922h.049v-.49l.002-.018l-.002-.018V63.67l.002-.018a3.44 3.44 0 0 0-3.236-3.429v-.022H34.498v-4.988h39.015z" />
+            </svg>
+            <span>Add To Cart</span>
+          </button>
+          <button class="border-2 px-1 rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+              <path
+                d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12" />
+            </svg>
+          </button>
+          <button class="border-2 px-1 text-darkgrey rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+              <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="32"
+                d="m400 304l48 48l-48 48m0-288l48 48l-48 48M64 352h128l60-92" />
+              <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="32"
+                d="M64 160h128l128 192h96m0-192h-96l-32 48" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 justify-center items-center border-2 py-4 rounded-sm px-4">
+        <img src="./img/homeimg/image 37.png" alt="">
+        <h3 class="text-center font-bold   ">Smart phone & tablet</h3>
+        <div class="flex text-yellow">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+        </div>
+        <h3 class="text-pink font-bold text-xl">$50.00</h3>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-2 border-2 px-1 text-darkgrey rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+              <circle cx="32.961" cy="81.02" r="5.889" fill="currentColor" />
+              <circle cx="74.309" cy="81.02" r="5.889" fill="currentColor" />
+              <path fill="currentColor"
+                d="M73.513 55.216a3.443 3.443 0 0 0 3.11-1.978l.003.002l14.589-25.27l-.018-.01c.214-.449.344-.946.344-1.477a3.451 3.451 0 0 0-3.452-3.452h-53.59v-6.488a3.451 3.451 0 0 0-3.452-3.452H12.186v.028c-.092-.008-.181-.028-.275-.028a3.44 3.44 0 0 0-3.41 3.035h-.042v3.452a3.451 3.451 0 0 0 3.452 3.452c.094 0 .183-.021.275-.028v.028h12.373v43.733h.001a3.45 3.45 0 0 0 3.451 3.442h59.256v-.085a3.433 3.433 0 0 0 3.185-2.922h.049v-.49l.002-.018l-.002-.018V63.67l.002-.018a3.44 3.44 0 0 0-3.236-3.429v-.022H34.498v-4.988h39.015z" />
+            </svg>
+            <span>Add To Cart</span>
+          </button>
+          <button class="border-2 px-1 rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+              <path
+                d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12" />
+            </svg>
+          </button>
+          <button class="border-2 px-1 text-darkgrey rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512">
+              <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="32"
+                d="m400 304l48 48l-48 48m0-288l48 48l-48 48M64 352h128l60-92" />
+              <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="32"
+                d="M64 160h128l128 192h96m0-192h-96l-32 48" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flex sm:flex-nowrap flex-wrap py-6 gap-6">
+      <img src="./img/homeimg/Rectangle 4322.png" alt="" class="h-60 sm:w-1/2 w-full">
+      <img src="./img/homeimg/Rectangle 4335.png" alt="" class="h-60 sm:w-1/2 w-full">
+    </div>
+  
+  <!-- New Arrivals div end -->
+
+  <!-- Top Categories div start -->
+  <h1 class="text-3xl font-bold text-center ">Top Categories</h1>
+  <div class="flex justify-center items-center text-blue py-3">
+    <div class="w-20 border-b-2 border-blue"></div>
+    <i class="fa-solid fa-circle text-[8px] bg-black h-3 w-3 rounded-full"></i>
+    <div class="w-20 border-b-2 border-blue"></div>
+  </div>
+
+
+  <div class="flex gap-6 bg-darkblue py-4 px-4 mx-4 flex-wrap rounded-md text-white">
+    <h3 class="border-r-2 pr-2 text-nowrap">FASHION</h3>
+    <h3 class="border-r-2 pr-2 text-nowrap">HOME & GARDEN</h3>
+    <h3 class="border-r-2 pr-2 text-nowrap">HOME & GARDEN</h3>
+    <h3 class="border-r-2 pr-2 text-nowrap">ELECTRONICS</h3>
+    <h3 class="border-r-2 pr-2 text-nowrap">HOME & GARDEN</h3>
+    <h3 class="border-r-2 pr-2 text-nowrap">FURNITURE</h3>
+    <h3 class="border-r-2 pr-2 text-nowrap">HOME & GARDEN</h3>
+    <h3 class="border-r-2 pr-2 text-nowrap">HEALTHY & BEAUTY</h3>
+  </div>
+
+  <div class="relative w-full glide-04 px-8 py-10">
+    <!-- Slides -->
+    <div class="overflow-hidden" data-glide-el="track">
+      <ul
+        class="relative w-full overflow-hidden  whitespace-no-wrap flex flex-no-wrap gap-4  [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+        
+        <li class="hover:scale-110 transition ease-in-out duration-700">
+          <img class="" src="./img/homeimg/Group 339977.png" />
+          <div class="bg-lightblue flex flex-col px-2 mt-2  justify-end items-center -z-50   relative top-[-28%] h-96 pb-4 ">
+            <h3 class="text-darkdarkblue text-xl font-bold">Man Hoodies</h3>
+            <p class="text-center text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <button class="bg-darkdarkblue text-white rounded-2xl px-6 py-1 inline mt-4 ">KNOW MORE</button>
+          </div>
+        </li>
+        <li class="hover:scale-110 transition ease-in-out duration-700">
+          <img src="./img/homeimg/Group 339978.png" />
+          <div class="bg-lightblue flex flex-col px-2 mt-2  justify-end items-center -z-50   relative top-[-28%] h-96 pb-4 ">
+            <h3 class="text-darkdarkblue text-xl font-bold">Man Hoodies</h3>
+            <p class="text-center text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <button class="bg-darkdarkblue text-white rounded-2xl px-6 py-1 inline mt-4 ">KNOW MORE</button>
+          </div>
+        </li>
+        <li class="hover:scale-110 transition ease-in-out duration-700">
+          <img class="" src="./img/homeimg/Group 339977.png" />
+          <div class="bg-lightblue flex flex-col px-2 mt-2  justify-end items-center -z-50   relative top-[-28%] h-96 pb-4 ">
+            <h3 class="text-darkdarkblue text-xl font-bold">Man Hoodies</h3>
+            <p class="text-center text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <button class="bg-darkdarkblue text-white rounded-2xl px-6 py-1 inline mt-4 ">KNOW MORE</button>
+          </div>
+        </li>
+       
+    
+      </ul>
+    </div>
+<!-- Indicators -->
+<div class="flex items-center justify-center w-full gap-2" data-glide-el="controls[nav]">
+  <button class="p-4 group" data-glide-dir="=0" aria-label="goto slide 1"><span class="block w-2 h-2 transition-colors duration-300 rounded-full ring-1 ring-slate-700 bg-white/20 focus:outline-none"></span></button>
+  <button class="p-4 group" data-glide-dir="=1" aria-label="goto slide 2"><span class="block w-2 h-2 transition-colors duration-300 rounded-full ring-1 ring-slate-700 bg-white/20 focus:outline-none"></span></button>
+  <button class="p-4 group" data-glide-dir="=2" aria-label="goto slide 3"><span class="block w-2 h-2 transition-colors duration-300 rounded-full ring-1 ring-slate-700 bg-white/20 focus:outline-none"></span></button>
+ 
+</div>
+  </div>
+
+  <!-- Top Categories div end -->
+
+
+  <!-- daily deals div start -->
+
+  <h1 class="text-3xl font-bold text-center ">Daily Deals</h1>
+  <div class="flex justify-center items-center text-blue py-3">
+    <div class="w-20 border-b-2 border-blue"></div>
+    <i class="fa-solid fa-circle text-[8px] bg-black h-3 w-3 rounded-full"></i>
+    <div class="w-20 border-b-2 border-blue"></div>
+  </div>
+  <div class="flex lg:flex-row flex-col gap-4 px-4 py-6 ">
+    <div class="bg-lightPink sm:flex-row flex-col  flex gap-4 py-6 px-4 rounded-md">
+      <img src="./img/homeimg/Rectangle 4244.png" alt="">
+      <div class="flex flex-col gap-2 sm:justify-start justify-center sm:items-start items-center">
+        <div>
+          <h3 class=" font-bold sm:text-start text-center text-xl ">JLB Bluetooth Speakers</h3>
+          <h3 class=" font-bold text-xl text-orange sm:text-start text-center">$50.00</h3>
+
+        </div>
+        <h3 class="sm:text-start text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's</h3>
+        <div class="flex gap-4 items-center">
+          <div class="">
+            <h3 class="font-bold text-xl">Hurry Up!</h3>
+            <h3 class="font-semibold">Offers end in:</h3>
+          </div>
+          <div class="flex  gap-2 text-xs flex-wrap">
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">20</h1>
+              <h4>DAYS</h4>
+            </div>
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">06</h1>
+              <h4>HOURS</h4>
+            </div>
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">12</h1>
+              <h4>MINS</h4>
+            </div>
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">20</h1>
+              <h4>SECS</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-lightPink sm:flex-row flex-col  flex gap-4 py-6 px-4 rounded-md">
+      <img src="./img/homeimg/Rectangle 4244 (1).png" alt="" class="">
+      <div class="flex flex-col gap-2 sm:justify-start justify-center sm:items-start items-center">
+        <div>
+          <h3 class=" font-bold sm:text-start text-center text-xl ">JLB Bluetooth Speakers</h3>
+          <h3 class=" font-bold text-xl text-orange sm:text-start text-center">$50.00</h3>
+
+        </div>
+        <h3 class="sm:text-start text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's</h3>
+        <div class="flex gap-4 items-center">
+          <div class="">
+            <h3 class="font-bold text-xl">Hurry Up!</h3>
+            <h3 class="font-semibold">Offers end in:</h3>
+          </div>
+          <div class="flex  gap-2 text-xs flex-wrap">
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">20</h1>
+              <h4>DAYS</h4>
+            </div>
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">06</h1>
+              <h4>HOURS</h4>
+            </div>
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">12</h1>
+              <h4>MINS</h4>
+            </div>
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">20</h1>
+              <h4>SECS</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap gap-10 p-2 mx-4 justify-center items-center border-2 rounded-md">
+    <div class="flex items-center gap-3">
+      <img src="./img/homeimg/Vector.png" alt="">
+      <div>
+        <h3 class="font-bold">Free Shipping & Returns</h3>
+        <h3>For all order over $99</h3>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <img src="./img/homeimg/Vector (1).png" alt="">
+      <div>
+        <h3 class="font-bold">Secure Payment</h3>
+        <h3>We ensure secure payment</h3>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <img src="./img/homeimg/Vector (2).png" alt="">
+      <div>
+        <h3 class="font-bold">Money Back Guarantee</h3>
+        <h3>Any back within 30 days</h3>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <img src="./img/homeimg/Group.png" alt="">
+      <div>
+        <h3 class="font-bold">Customer Support</h3>
+        <h3>Call or email us 24/7</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- daily deals div end -->
+
+  <!-- Best Seller div start -->
+  <h1 class="text-3xl font-bold text-center pt-6">Best Seller</h1>
+  <div class="flex justify-center items-center text-blue py-3">
+    <div class="w-20 border-b-2 border-blue"></div>
+    <i class="fa-solid fa-circle text-[8px] bg-black h-3 w-3 rounded-full"></i>
+    <div class="w-20 border-b-2 border-blue"></div>
+  </div>
+
+  <div class="flex px-4 items-center gap-4 py-4 flex-col lg:flex-row">
+    <div class="flex sm:flex-row  flex-col items-center shadow-md px-4 py-4 rounded-md">
+      <div class="flex flex-row flex-wrap gap-2 sm:flex-col">
+        <img src="./img/homeimg/Rectangle 4246.png" alt="" class="w-20">
+        <img src="./img/homeimg/Rectangle 4247.png" alt="" class="w-20">
+        <img src="./img/homeimg/Rectangle 4248.png" alt="" class="w-20">
+        <img src="./img/homeimg/Rectangle 4249.png" alt="" class="w-20">
+      </div>
+      <div class="flex sm:flex-row flex-col  items-center">
+        <img src="./img/homeimg/image 15.png" alt="">
+        <div class="flex flex-col gap-2 sm:justify-start justify-center sm:items-start items-center">
+          <div>
+            <h3 class=" font-bold sm:text-start text-center  ">SMART PHONE & TABLET</h3>
+            <h3 class="sm:text-start text-center">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.</h3>
+
+            <div class="flex text-yellow sm:justify-start justify-center sm:items-start items-center ">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+              </svg>
+            </div>
+          </div>
+          <h3 class=" font-bold text-xl text-orange">$50.00</h3>
+          <div class="flex  gap-2 text-xs ">
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">20</h1>
+              <h4>DAYS</h4>
+            </div>
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">06</h1>
+              <h4>HOURS</h4>
+            </div>
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">12</h1>
+              <h4>MINS</h4>
+            </div>
+            <div class="flex flex-col gap-1 items-center">
+              <h1 class=" text-white rounded-full bg-pink text-xl py-2 px-3">20</h1>
+              <h4>SECS</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="./img/homeimg/Rectangle 4345.png" alt="">
+    </div>
+  </div>
+  <!-- Best Seller div end -->
+
+  <!-- ON SAlE div start -->
+  <!-- heading  -->
+  <h1 class="text-3xl font-bold text-center ">ON SAlE</h1>
+  <div class="flex justify-center items-center text-blue py-3">
+    <div class="w-20 border-b-2 border-blue"></div>
+    <i class="fa-solid fa-circle text-[8px] bg-black h-3 w-3 rounded-full"></i>
+    <div class="w-20 border-b-2 border-blue"></div>
+  </div>
+
+  <div class="flex gap-10 justify-center flex-wrap py-10">
+
+    <!--1 st div -->
+    <div class="flex gap-4">
+      <img src="./img/homeimg/Rectangle 4250.png" alt="">
+      <div>
+        <h3>Lorem Ipsum is simply dummy</h3>
+        <h3 class=" font-bold text-xl">$50.00</h3>
+        <div class="flex text-yellow">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+        </div>
+
+      </div>
+    </div>
+    <!--2 nd div -->
+    <div class="flex gap-4">
+      <img src="./img/homeimg/Rectangle 4251.png" alt="">
+      <div>
+        <h3>Lorem Ipsum is simply dummy</h3>
+        <h3 class=" font-bold text-xl">$50.00</h3>
+        <div class="flex text-yellow">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+        </div>
+
+      </div>
+    </div>
+    <!--3 nd div -->
+    <div class="flex gap-4">
+      <img src="./img/homeimg/Rectangle 4252.png" alt="">
+      <div>
+        <h3>Lorem Ipsum is simply dummy</h3>
+        <h3 class=" font-bold text-xl">$50.00</h3>
+        <div class="flex text-yellow">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 4th div -->
+    <div class="flex gap-4">
+      <img src="./img/homeimg/Rectangle 4346.png" alt="">
+      <div>
+        <h3>Lorem Ipsum is simply dummy</h3>
+        <h3 class=" font-bold text-xl">$50.00</h3>
+        <div class="flex text-yellow">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+        </div>
+
+      </div>
+    </div>
+    <!--5 th div -->
+    <div class="flex gap-4">
+      <img src="./img/homeimg/Rectangle 4347.png" alt="">
+      <div>
+        <h3>Lorem Ipsum is simply dummy</h3>
+        <h3 class=" font-bold text-xl">$50.00</h3>
+        <div class="flex text-yellow">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+        </div>
+
+      </div>
+    </div>
+    <!--6 th  div -->
+    <div class="flex gap-4">
+      <img src="./img/homeimg/Rectangle 4252.png" alt="">
+      <div>
+        <h3>Lorem Ipsum is simply dummy</h3>
+        <h3 class=" font-bold text-xl">$50.00</h3>
+        <div class="flex text-yellow">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z" />
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z" />
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ON SAlE div end -->
+
+  <!-- Emarket partners div start -->
+  <!-- heading  -->
+  <h1 class="text-3xl font-bold text-center ">Emarket partners</h1>
+  <div class="flex justify-center items-center text-blue py-3">
+    <div class="w-20 border-b-2 border-blue"></div>
+    <i class="fa-solid fa-circle text-[8px] bg-black h-3 w-3 rounded-full"></i>
+    <div class="w-20 border-b-2 border-blue"></div>
+  </div>
+
+
+  <div class="grid sm:grid-cols-8 grid-cols-4  px-4 py-4">
+    <img src="./img/homeimg/image 31.png" alt="" class="">
+    <img src="./img/homeimg/image 24.png" alt="" class="">
+    <img src="./img/homeimg/image 23.png" alt="" class="">
+    <img src="./img/homeimg/image 19.png" alt="" class="">
+    <img src="./img/homeimg/image 20.png" alt="" class="">
+    <img src="./img/homeimg/image 22.png" alt="" class="">
+    <img src="./img/homeimg/image 21.png" alt="" class="">
+    <img src="./img/homeimg/image 32.png" alt="" class="">
+
+  </div>
+  <!-- Emarket partners div end -->
+
+
+
+  <!-- Follow us on instagram div start -->
+  <!-- heading  -->
+  <h1 class="text-3xl font-bold text-center ">Follow us on instagram</h1>
+  <div class="flex justify-center items-center text-blue py-3">
+    <div class="w-20 border-b-2 border-blue"></div>
+    <i class="fa-solid fa-circle text-[8px] bg-black h-3 w-3 rounded-full"></i>
+    <div class="w-20 border-b-2 border-blue"></div>
+  </div>
+
+
+  <div class="grid sm:grid-cols-5 grid-cols-2 gap-6 px-4">
+    <img src="./img/homeimg/Rectangle 4259.png" alt="" class="w-60">
+    <img src="./img/homeimg/Rectangle 4260.png" alt="" class="w-60">
+    <img src="./img/homeimg/Rectangle 4261.png" alt="" class="w-60">
+    <img src="./img/homeimg/Rectangle 4262.png" alt="" class="w-60">
+    <img src="./img/homeimg/Rectangle 4263.png" alt="" class="w-60">
+
+  </div>
+  <!-- Follow us on instagram div end -->
+
+
+
+  
+  <div class="  mt-40">
+
+    <footer class="p-4 bg-[#0163D2]  sm:p-6 dark:bg-gray-800">
+      <div class="md:flex md:justify-start md:items-center">
+
+        <div class="grid md:grid-cols-2 text-center md:text-left  grid-row-2 md:grid-rows-1 gap-8 sm:gap-6 xl:grid-cols-8   sm:gap-x-32">
+          <div class="whitespace-nowrap">
+            <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">About</h3>
+            <ul>
+              <div class="space-y-2 text-[10px] md:text-sm">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">About Us </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">Careers</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">Flipkart Stories</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">Press</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">Super Duper Wholesale</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">Corporate Information</a>
+                </li>
+              </div>
+
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Help</h3>
+            <ul>
+              <div class="space-y-2 text-[10px] md:text-sm whitespace-nowrap">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Payments</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Shipping</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Cancellation &
+                    Returns</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">FAQ</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Report
+                    Infringement</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="">
+            <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white whitespace-nowrap">CONSUMER
+              POLICY</h3>
+            <ul>
+              <div class="space-y-2 text-[10px] md:text-sm whitespace-nowrap">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Return Policy</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Terms
+                    &amp; Conditions</a>
+                </li>
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Security</a>
+                </li>
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Privacy</a>
+                </li>
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Sitemap</a>
+                </li>
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Grievance
+                    Redressal</a>
+                </li>
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">EPR
+                    Compliance</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="after:relative	">
+            <h3
+              class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white after:content-[''] after:border-r-2 after:border-white after:py-40 after:absolute after:right-[52%] after:hidden xl:after:block">
+              SOCIAL</h3>
+            <ul>
+              <div class="space-y-2 text-[10px] md:text-sm">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Facebook</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Twitter</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">YouTube</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="xl:translate-x-[-50px] ">
+            <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Company</h3>
+            <ul>
+              <div class="space-y-2 whitespace-nowrap  text-[10px] md:text-sm">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Super Duper
+                    Internet Private Limited</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Buildings Alyssa,
+                    Begonia & Clove Embassy Tech Village</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Outer Ring Road,
+                    Devarabeesanahalli Village</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Bengaluru,
+                    560103</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Karnataka,
+                    India</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class=" xl:ml-32 	">
+            <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Company</h3>
+            <ul>
+              <div class="space-y-2 whitespace-nowrap  text-[10px] md:text-sm">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">FacebSuper Duper
+                    Internet Private <br> Limitedook</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Buildings Alyssa,
+                    Begonia &</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Clove Embassy
+                    Tech Village</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Outer Ring Road,
+                    Devarabeesanahalli Village</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Bengaluru,
+                    560103</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Karnataka,
+                    India</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">CIN :
+                    U51109KA2012PTC066107</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Telephone:
+                    044-45614700</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+
+      <hr class="my-6 border-gray-200 sm:mx-auto  dark:border-gray-700 lg:mt-20">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <div class="spandivfooter text-white flex md:gap-3 items-center xl:text-lg text-sm pl-2 flex-col gap-4 sm:grid sm:grid-cols-1 md:grid-cols-2  sm:place-items-start sm:whitespace-nowrap lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-6 md:gap-x-[2rem]">
+          <span class="">
+                         <i class="fa-solid fa-suitcase scale-125 mr-2" style="color: #FFD43B;"></i>
+           Become a Seller  </span>
+          <span class="flex gap-2 items-center justify-center">
+            <img src="./imges/starimage.png" class=" w-5" alt="">
+             Advertise  </span>
+          <span class="flex gap-2 items-center">
+           <img src="./imges/giftimage.png" alt="">
+           Gift Cards
+           </span>
+          <span class="flex gap-2 items-center">
+           <img src="./imges/questionimage.png" class="w-5" alt="">
+           Help Center
+           </span>
+        </div>
+        <div class="smallimagediv flex md:gap-8 items-center flex-col gap-4 sm:flex-row lg:flex-col lg:w-[50%] xl:flex-row">
+          <span class="text-white text-sm xl:text-[1rem] sm:text-center">© 2007-2023 Superduper.com</span>
+
+          <div class="imagedivnew">
+            <img src="./imges/ATMimages.png" class="w-80" alt="">
+          </div>
+         </div>
+      </div>
+    </footer>
+
+
+  </div>
+
+  </div>
+
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+  <!-- side bar script -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+
+    const maincontent = document.getElementById('main-content');
+    const openSidebarButton = document.getElementById('open-sidebar');
+    openSidebarButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      sidebar.classList.toggle('-translate-x-full');
+      // maincontent.style.position = 'static';
+    });
+    // Close the sidebar when clicking outside of it
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
+        sidebar.classList.add('-translate-x-full');
+        maincontent.style.position = 'static';
+      }
+    });
+
+
+
+
+
+    // person profile
+    const navsidepage = document.getElementById('navsidepage');
+    const profile = document.getElementById('profile');
+
+
+    profile.addEventListener('click', (e) => {
+
+     
+      if(navsidepage.style.display=="block"){
+            navsidepage.style.display = "none";
+        }
+        else{
+          navsidepage.style.display = "block";
+
+      }
+
+    });
+    // Close the sidebar when clicking outside of it
+    document.addEventListener('click', (e) => {
+      if (!navsidepage.contains(e.target) && !profile.contains(e.target)) {
+
+        navsidepage.style.display = "none";
+
+      }
+    });
+
+  </script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+
+  <script>
+    var glide05 = new Glide('.glide-05', {
+      type: 'carousel',
+      focusAt: 'center',
+      perView: 7,
+      autoplay: 3000,
+      animationDuration: 700,
+      gap: 20,
+      classes: {
+        activeNav: '[&>*]:bg-slate-700',
+      },
+      breakpoints: {
+        1024: {
+          perView: 3,
+          
+        },
+        640: {
+          perView: 3
+        }
+      },
+    });
+
+    glide05.mount();
+
+
+    // top categories slider
+    var glide04 = new Glide('.glide-04', {
+      type: 'carousel',
+      focusAt: 'center',
+      perView: 3,
+      autoplay: 3000,
+      animationDuration: 700,
+      gap: 24,
+      classes: {
+        activeNav: '[&>*]:bg-slate-700',
+      },
+      breakpoints: {
+        1024: {
+          perView: 3
+        },
+        640: {
+          perView: 2
+        }
+      },
+    });
+
+    glide04.mount();
+
+
+
+    
+  </script>
+    </div>
+   
+
+<script src="./header.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        darkblue: '#0163D2',
+                        darkdarkblue: '#073B74',
+                        blue: '#00BAF2',
+                        lightblue: '#B4D7FF',
+                        lightgrey: '#F6F6F6',
+                        yellow: '#F1E64E',
+                        pink: '#F74B81',
+                        grey: '#bbb',
+                        darkgrey: '#717171',
+                        black: '#000',
+                        orange: '#F59758',
+                        lightPink: '#FFEFF4',
+
+
+                        lightlevendar: '#EFEFEF',
+                        lightblack: '#C3C3C3',
+                        green:'#00C14D',
+                        
+
+                    },
+                    backgroundImage: {
+                        "bg1venderList": "url('./homeimg/Group 338363.png')",
+                    }
+
+                }
+            }
+        }
+    </script>
+    <title>Document</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!-- ...or whereever you have jquery stored -->
+    <script> 
+    $(function(){
+      $("#sidebar").load("/Main.html"); 
+    });
+    </script>
+</head>
+<body>
+    
+ 
+
+<div id="sidebar"></div>
+    <!-- main content div  start -->
+<div class="p-6">
+
+    <div class="flex justify-center items-center font-bold text-grey py-3">
+        <div class="flex flex-col pr-2 items-center">
+            <svg class="mt-4 " xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 576 512"><path fill="grey" d="M0 24C0 10.7 10.7 0 24 0h45.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5l-51.6-271c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24m128 440a48 48 0 1 1 96 0a48 48 0 1 1-96 0m336-48a48 48 0 1 1 0 96a48 48 0 1 1 0-96M252 160c0 11 9 20 20 20h44v44c0 11 9 20 20 20s20-9 20-20v-44h44c11 0 20-9 20-20s-9-20-20-20h-44V96c0-11-9-20-20-20s-20 9-20 20v44h-44c-11 0-20 9-20 20"/></svg>
+            <p class="sm:block hidden">Cart</p>
+         </div>
+        <div class="w-20 border-b-2 border-grey"></div>
+        <i class="fa-solid fa-circle text-[8px] bg-grey h-3 w-3 rounded-full"></i>
+ <div class="flex flex-col pl-2 items-center">
+    <svg class="mt-4" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 32 32"><path fill="grey" d="M16 2A11.013 11.013 0 0 0 5 13a10.889 10.889 0 0 0 2.216 6.6s.3.395.349.452L16 30l8.439-9.953c.044-.053.345-.447.345-.447l.001-.003A10.885 10.885 0 0 0 27 13A11.013 11.013 0 0 0 16 2m0 15a4 4 0 1 1 4-4a4.005 4.005 0 0 1-4 4"/><circle cx="16" cy="13" r="4" fill="none"/></svg>
+    <p class="sm:block hidden">Address</p>
+ </div>
+        <div class="w-20 border-b-2 border-grey"></div>
+        <i class="fa-solid fa-circle text-[8px] bg-grey h-3 w-3 rounded-full"></i>
+ <div class="flex flex-col pl-2 items-center">
+    <svg class="mt-2" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 16 16"><path fill="grey" d="M3.5 3A2.5 2.5 0 0 0 1 5.5V6h14v-.5A2.5 2.5 0 0 0 12.5 3zM15 7H1v3.5A2.5 2.5 0 0 0 3.5 13h9a2.5 2.5 0 0 0 2.5-2.5zm-4.5 3h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1"/></svg>
+    <p class="sm:block hidden">payment</p>
+ </div>
+        <div class="w-20 border-b-2 border-grey"></div>
+        <i class="fa-solid fa-circle text-[8px] bg-grey h-3 w-3 rounded-full"></i>
+ <div class="flex flex-col pl-2 items-center">
+    <svg class="mt-2 " xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="grey" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2V5a2 2 0 0 0-2-2m0 16H5V9h14zM5 7V5h14v2zm2 4h10v2H7zm0 4h7v2H7z"/></svg>
+    <p class="sm:block hidden">summary</p>
+ </div>
+      </div>
+
+     <!-- table div start -->
+     <div class="overflow-x-auto">
+        <table class="w-full mt-4 ">
+            <thead class="bg-darkblue  text-white">
+                <th class="py-4"><input type="checkbox" Checked class="text-grey "></th>
+                <th class="">Product </th>
+                <th>Price </th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </thead>
+            <!-- table body  -->
+            <tbody class="text-center text-sm">
+                <tr>
+                    <td class="py-4 px-4"><input type="checkbox" Checked class="text-darkblue"></td>
+                    <td class="py-4 px-4 flex items-center justify-center flex-nowrap">
+                        <img class="h-10 object-cover " src="../img/cart/Rectangle 4381.png" alt="">
+                        <p class="text-nowrap">LED Smart Google TV </p>
+                    </td>
+                    <td class="py-4 px-4">₹49,999</td>
+                    <td class="py-4 px-4">1</td>
+                    <td class="py-4 px-4">₹49,999</td>
+                </tr>
+                <tr>
+                    <td class="py-4 px-4"><input type="checkbox" Checked class="text-grey "></td>
+                    <td class="py-4 px-4 flex justify-center items-center">
+                        <img class="h-10 object-cover" src="../img/cart/Rectangle 4382.png" alt="">
+                        <p class="text-nowrap">LED Smart Google TV </p>
+                    </td>
+                    <td class="py-4 px-4">₹49,999</td>
+                    <td class="py-4 px-4">1</td>
+                    <td class="py-4 px-4">₹49,999</td>
+                </tr>
+              
+              
+             
+            </tbody>
+        </table>
+    </div>
+    <!-- table div end -->
+
+
+    <div class="flex sm:flex-row flex-col gap-4 pt-6"> 
+        <img class="lg:w-full sm:w-96 w-full" src="../img/cart/Rectangle 4389.png" alt="">
+        <div class="flex flex-col shadow-lg w-full rounded-md  px-4">
+            <h3 class="border-b-2 border-bordercolor text-darkgrey font-semibold py-4">PRICE DETAILS</h3>
+            <div class="flex justify-between p-4">
+                <h3 class="text-grey font-semibold">Price (4 items)  </h3>
+                <h3 class="text-grey font-semibold"> ₹2,58,689</h3>
+            </div>
+            <div  class="flex justify-between p-4">
+                <h3 class="text-grey font-semibold">Discount  </h3>
+                <h3 class="text-green font-semibold">  − ₹72,790  </h3>
+            </div>
+            <div  class="flex justify-between p-4">
+                <h3 class="text-grey font-semibold">Buy more & save more  </h3>
+                <h3 class="text-green font-semibold"> − ₹1,000</h3>
+            </div>
+            <div  class="flex justify-between p-4">
+                <h3 class="text-grey font-semibold">Delivery Charges    </h3>
+                <h3 class="text-green font-semibold"> ₹80 Free</h3>
+            </div>
+            <div  class="flex justify-between p-4">
+                <h3 class="text-grey font-semibold">Secured Packaging Fee  </h3>
+                <h3 class="text-green font-semibold"> ₹99</h3>
+            </div>
+            <div  class="flex justify-between p-4 border-y-2 border-dashed">
+                <h3 class="font-semibold">Total Amount    </h3>
+                <h3 class="font-semibold"> ₹1,84,998</h3>
+            </div>
+            <div class="py-2 flex justify-end">
+            <button class="rounded-sm px-4 py-2 bg-darkblue text-white" onclick="placeOrder()">PLACE ORDER</button>
+        </div>
+        </div>
+    </div>
+
+
+
+</div>
+    <!-- main content div end -->
+
+
+    
+<!-- footer div start -->
+<div class="  mt-10">
+
+    <footer class="p-4 bg-[#0163D2]  sm:p-6 dark:bg-gray-800">
+      <div class="md:flex md:justify-start md:items-center">
+  
+        <div class="grid md:grid-cols-2 text-center md:text-left  grid-row-2 md:grid-rows-1 gap-8 sm:gap-6 xl:grid-cols-8   sm:gap-x-32">
+          <div class="whitespace-nowrap">
+            <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">About</h3>
+            <ul>
+              <div class="space-y-2 text-[.625rem] md:text-sm">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">About Us </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">Careers</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">Flipkart Stories</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">Press</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">Super Duper Wholesale</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow"
+                    class="text-white hover:underline dark:text-gray-400">Corporate Information</a>
+                </li>
+              </div>
+  
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Help</h3>
+            <ul>
+              <div class="space-y-2 text-[.625rem] md:text-sm whitespace-nowrap">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Payments</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Shipping</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Cancellation &
+                    Returns</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">FAQ</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Report
+                    Infringement</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="">
+            <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white whitespace-nowrap">CONSUMER
+              POLICY</h3>
+            <ul>
+              <div class="space-y-2 text-[.625rem] md:text-sm whitespace-nowrap">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Return Policy</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Terms
+                    &amp; Conditions</a>
+                </li>
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Security</a>
+                </li>
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Privacy</a>
+                </li>
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Sitemap</a>
+                </li>
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Grievance
+                    Redressal</a>
+                </li>
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">EPR
+                    Compliance</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="after:relative	">
+            <h3
+              class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white after:content-[''] after:border-r-2 after:border-white after:py-40 after:absolute after:right-[52%] after:hidden xl:after:block">
+              SOCIAL</h3>
+            <ul>
+              <div class="space-y-2 text-[.625rem] md:text-sm">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Facebook</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Twitter</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">YouTube</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="xl:translate-x-[-3.125rem] ">
+            <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Company</h3>
+            <ul>
+              <div class="space-y-2 whitespace-nowrap  text-[.625rem] md:text-sm">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Super Duper
+                    Internet Private Limited</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Buildings Alyssa,
+                    Begonia & Clove Embassy Tech Village</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Outer Ring Road,
+                    Devarabeesanahalli Village</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Bengaluru,
+                    560103</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Karnataka,
+                    India</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class=" xl:ml-32 	">
+            <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Company</h3>
+            <ul>
+              <div class="space-y-2 whitespace-nowrap  text-[.625rem] md:text-sm">
+                <li class="">
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">FacebSuper Duper
+                    Internet Private <br> Limitedook</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Buildings Alyssa,
+                    Begonia &</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Clove Embassy
+                    Tech Village</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Outer Ring Road,
+                    Devarabeesanahalli Village</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Bengaluru,
+                    560103</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">Karnataka,
+                    India</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">CIN :
+                    U51109KA2012PTC066107</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="text-white hover:underline dark:text-gray-400">textephone:
+                    044-45614700</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+  
+  
+        </div>
+      </div>
+  
+      <hr class="my-6 border-gray-200 sm:mx-auto  dark:border-gray-700 lg:mt-20">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <div class="spandivfooter text-white flex md:gap-3 items-center xl:text-lg text-sm pl-2 flex-col gap-4 sm:grid sm:grid-cols-1 md:grid-cols-2  sm:place-items-start sm:whitespace-nowrap lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-6 md:gap-x-[32px]">
+          <span class="">
+                         <i class="fa-solid fa-suitcase scale-125 mr-2" style="color: #FFD43B;"></i>
+           Become a Seller  </span>
+          <span class="flex gap-2 items-center justify-center">
+            <img src="./imges/starimage.png" class=" w-5" alt="">
+             Advertise  </span>
+          <span class="flex gap-2 items-center">
+           <img src="./imges/giftimage.png" alt="">
+           Gift Cards
+           </span>
+          <span class="flex gap-2 items-center">
+           <img src="./imges/questionimage.png" class="w-5" alt="">
+           Help Center
+           </span>
+        </div>
+        <div class="smallimagediv flex md:gap-8 items-center flex-col gap-4 sm:flex-row lg:flex-col lg:w-[50%] xl:flex-row">
+          <span class="text-white text-sm xl:text-[16px] sm:text-center">© 2007-2023 Superduper.com</span>
+  
+          <div class="imagedivnew">
+            <img src="./imges/ATMimages.png" class="w-80" alt="">
+          </div>
+         </div>
+      </div>
+    </footer>
+  
+  
+  </div>
+  <!-- footer div end -->
+  
+
+  
+<script>
+
+function placeOrder(){
+   window.location.href="/cart/cartAddress.html";
+}
+
+  
+
+
+
+
+
+
+</script>
+</body>
+</html>

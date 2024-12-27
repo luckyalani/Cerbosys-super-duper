@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        darkblue: '#0163D2',
+                        darkdarkblue: '#073B74',
+                        blue: '#00BAF2',
+                        lightblue: '#B4D7FF',
+                        lightgrey: '#F6F6F6',
+                        yellow: '#F1E64E',
+                        pink: '#F74B81',
+                        grey: '#bbb',
+                        darkgrey: '#717171',
+                        black: '#000',
+                        orange: '#F59758',
+                        lightPink: '#FFEFF4',
+
+
+                        lightlevendar: '#EFEFEF',
+                        lightblack: '#C3C3C3',
+                        green: '#00C14D',
+                        tan:'#FFEFB5',
+
+
+                    },
+                    backgroundImage: {
+                        "bg1venderList": "url('./homeimg/Group 338363.png')",
+                    }
+
+                }
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+<!-- header  side bar start -->
+<div class="fixed z-50">
+    <div
+    class=" absolute  bg-black text-white w-40 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
+    id="sidebar">
+    <!-- Your Sidebar Content -->
+    <div class="p-4">
+      <h1 class="text-xl font-semibold">Sidebar</h1>
+      <ul class="mt-4 text-md">
+        <li class="mb-2"><a href="/home.html" class="block hover:text-indigo-400">Home</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Shops</a></li>
+        <li class="mb-2"><a href="/Product/ProductMan.html" class="block hover:text-indigo-400">Products</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Deals</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Blog</a></li>
+        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">About Us</a></li>
+        <li class="mb-2"><a href="/contactUs.html" class="block hover:text-indigo-400">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <!-- header side bar end -->
+  
+  
+  <!-- second header side bar start -->
+  <div class="fixed z-50 md:hidden block ">
+  <div class="dropdowndiv bg-black absolute flex flex-col gap-2 items-center min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300" id="secondHeaderSidebar">
+  
+    <div class=" text-center mt-10">
+        <div x-data="
+   {
+   dropdownOpen: false
+   }
+   " @click.outside="dropdownOpen = false" class="relative  inline-block text-left border-b border-white">
+            <button @click="dropdownOpen = !dropdownOpen"
+                class=" w-44 text-nowrap flex items-center gap-2 rounded-[5px]  py-[13px] text-sm font-medium text-white">
+                <img src="/imges/store.png" alt="" class="h-3 ml-4">
+                My Orders
+  
+            </button>
+            <div :class="dropdownOpen ? 'top-full opacity-100 visible' : 'top-[110%] invisible opacity-0' "
+                class="shadow-1 dark:shadow-box-dark absolute left-0 z-40 mt-2 w-full rounded-md text-white bg-[#00BAF2] dark:bg-dark-2 py-[10px] transition-all">
+                <a href="javascript:void(0)"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    Dashboard
+                </a>
+                <a href="javascript:void(0)"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    Settings
+                </a>
+                <a href="javascript:void(0)"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    Earnings
+                </a>
+                <a href="javascript:void(0)"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    Logout
+                </a>
+            </div>
+        </div>
+       
+    </div>
+  
+    <div class=" text-center">
+        <div x-data="
+   {
+   dropdownOpen: false
+   }
+   " @click.outside="dropdownOpen = false" class="relative inline-block text-left border-b border-white">
+            <button @click="dropdownOpen = !dropdownOpen"
+                class="w-44 text-nowrap flex items-center rounded-[5px] px-3 py-[13px] text-sm font-medium text-white">
+                <span class="text-lg mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                        <path fill="currentColor"
+                            d="M230.93 220a8 8 0 0 1-6.93 4H32a8 8 0 0 1-6.92-12c15.23-26.33 38.7-45.21 66.09-54.16a72 72 0 1 1 73.66 0c27.39 8.95 50.86 27.83 66.09 54.16a8 8 0 0 1 .01 8"
+                            class="" />
+                    </svg>
+                </span>
+                Account Settings
+  
+            </button>
+            <div :class="dropdownOpen ? 'top-full opacity-100 visible' : 'top-[110%] invisible opacity-0' "
+                class="shadow-1 dark:shadow-box-dark absolute left-0 z-40 mt-2 w-full rounded-md bg-[#00BAF2] dark:bg-dark-2 py-[10px] transition-all text-white">
+                <a href="/profilepage.html"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    Profile page
+                </a>
+                <a href="javascript:void(0)"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    Manage Addresses
+                </a>
+                <a href="javascript:void(0)"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-xs">
+                    PAN Card Information
+                </a>
+                <a href="javascript:void(0)"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+  
+                </a>
+            </div>
+        </div>
+    </div>
+  
+    <div class=" text-center">
+        <div x-data="
+   {
+   dropdownOpen: false
+   }
+   " @click.outside="dropdownOpen = false" class="relative  inline-block text-left border-b border-white">
+            <button @click="dropdownOpen = !dropdownOpen"
+                class="w-44 text-nowrap flex items-center rounded-[5px] px-3 py-[13px] text-sm font-medium text-white">
+                <span class="text-lg mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                        <g fill="none" stroke="currentColor" stroke-width="4">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 11.969L31.785 4l4.612 7.989z" clip-rule="evenodd" />
+                            <path stroke-linejoin="round"
+                                d="M4 14a2 2 0 0 1 2-2h36a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+                            <path stroke-linejoin="round"
+                                d="M35.25 33H44V23h-8.75c-2.9 0-5.25 2.239-5.25 5s2.35 5 5.25 5Z" />
+                            <path stroke-linecap="round" d="M44 16.5v24" />
+                        </g>
+                    </svg>
+                </span>
+  
+  
+                Payments
+  
+            </button>
+            <div :class="dropdownOpen ? 'top-full opacity-100 visible' : 'top-[110%] invisible opacity-0' "
+                class="shadow-1 dark:shadow-box-dark absolute left-0 z-40 mt-2 text-white w-full rounded-md bg-[#00BAF2] dark:bg-dark-2 py-[10px] transition-all">
+                <a href="/Payment/paymentGiftCard.html "
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    Gift cards
+                </a>
+                <a href="/Payment/PaymentSavedUPI.html"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    Saved UPI
+                </a>
+                <a href="/Payment/PaymentSavedCard.html"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    Saved Cards
+                </a>
+                <a href="javascript:void(0)"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+  
+                </a>
+            </div>
+        </div>
+    </div>
+  
+    <div class="py-5 text-center">
+        <div x-data="
+   {
+   dropdownOpen: false
+   }
+   " @click.outside="dropdownOpen = false" class="relative  inline-block text-left border-b border-white">
+            <button @click="dropdownOpen = !dropdownOpen"
+                class="w-44 text-nowrap flex items-center text-center rounded-[5px] px-3 gap-2 pb-3 text-sm font-medium text-white">
+                <img src="/imges/Vector (2).png" alt="" class="h-3 ">
+                My Stuff
+  
+            </button>
+            <div :class="dropdownOpen ? 'top-full opacity-100 visible' : 'top-[110%] invisible opacity-0' "
+                class="shadow-1 dark:shadow-box-dark absolute left-[-15px] z-40 mt-2 w-auto text-white rounded-md bg-[#00BAF2] dark:bg-dark-2 py-[10px] transition-all">
+                <a href="/MyStuff/myCoupon.html"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    My Coupons
+                </a>   
+                <a href="/MyStuff/MyReview&Rating.html"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm ">
+                    My Reviews & Ratings
+                </a>
+                <a href="MyStuff/AllNotification.html"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm whitespace-nowrap">
+                    All Notifications
+                </a>
+                <a href="MyStuff/MyWishList.html"
+                    class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                    My Wishlist
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
+  <!-- second header side bar end -->
+  
+  
+  
+    <!-- header section start -->
+    <div class=" bg-gray-200">
+      
+  
+       
+            <!-- header div start -->
+            <div class="flex justify-between bg-lightgrey rounded-sm p-4	relative">
+                <div class="flex items-center  gap-2 sm:gap-6">
+                    <svg id="open-sidebar" class=" block md:hidden	" xmlns="http://www.w3.org/2000/svg" width="2em"
+                    height="2em" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M4 18q-.425 0-.712-.288T3 17q0-.425.288-.712T4 16h16q.425 0 .713.288T21 17q0 .425-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12q0-.425.288-.712T4 11h16q.425 0 .713.288T21 12q0 .425-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7q0-.425.288-.712T4 6h16q.425 0 .713.288T21 7q0 .425-.288.713T20 8z" />
+                </svg>
+  
+                    <img class="w-36" src="../img/images/super duper.png" alt="">
+  
+                   
+                </div>
+                <div id="mySidenav" class="  md:block  hidden">
+                    <nav class="flex gap-4  mt-2">
+  
+                        <a href="/home.html" class="hover:underline hover:text-blue ">Home </a>
+                        <a href="#" class="hover:underline hover:text-blue "> Shops</a>
+                        <a href="/Product/ProductMan.html" class="hover:underline hover:text-blue ">Products</a>
+                        <a href="#" class="hover:underline hover:text-blue ">Deals</a>
+                        <a href="#" class="hover:underline hover:text-blue ">Blog</a>
+                        <a href="#" class="hover:underline hover:text-blue ">About Us</a>
+                        <a href="/contactUs.html" class="hover:underline hover:text-blue ">Contact Us</a>
+                    </nav>
+                </div>
+  
+  
+  
+                <div class="flex gap-4 text-blue mt-2 items-center">
+                    <!-- like icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 48 48">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="4"
+                            d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8" />
+                    </svg>
+                    <!-- cart icon -->
+                    <a href="/cart/cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 48 48">
+                        <g fill="none">
+                            <path d="M39 32H13L8 12h36z" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                d="M3 6h3.5L8 12m0 0l5 20h26l5-20z" />
+                            <circle cx="13" cy="39" r="3" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="4" />
+                            <circle cx="39" cy="39" r="3" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="4" />
+                        </g>
+                    </svg>
+                </a>
+                    <svg id="profile" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                        viewBox="0 0 15 15">
+                        <path fill="currentColor" d="M5 5.5a2.5 2.5 0 1 1 5 0a2.5 2.5 0 0 1-5 0" />
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7.5 0a7.5 7.5 0 1 0 0 15a7.5 7.5 0 0 0 0-15M1 7.5a6.5 6.5 0 1 1 10.988 4.702A3.5 3.5 0 0 0 8.5 9h-2a3.5 3.5 0 0 0-3.488 3.202A6.482 6.482 0 0 1 1 7.5"
+                            clip-rule="evenodd" />
+                    </svg>
+  
+                    <!-- profile side bar div start -->
+                    <div id="navsidepage"
+                        class=" hidden absolute top-16 right-0 z-30 bg-white pl-4 pr-10 py-4 rounded-md">
+  
+                        <nav class="flex gap-4  mt-2 flex-col text-black">
+                            <div class="flex items-center gap-4  hover:text-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                        <path d="M16 9a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-2 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0" />
+                                        <path
+                                            d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1M3 12c0 2.09.713 4.014 1.908 5.542A8.986 8.986 0 0 1 12.065 14a8.984 8.984 0 0 1 7.092 3.458A9 9 0 1 0 3 12m9 9a8.963 8.963 0 0 1-5.672-2.012A6.992 6.992 0 0 1 12.065 16a6.991 6.991 0 0 1 5.689 2.92A8.964 8.964 0 0 1 12 21" />
+                                    </g>
+                                </svg>
+                                <a href="#" class="  ">My Profile </a>
+                            </div>
+                            <div class="flex items-center gap-4  hover:text-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+                                        d="m15.578 3.382l2 1.05c2.151 1.129 3.227 1.693 3.825 2.708C22 8.154 22 9.417 22 11.942v.117c0 2.524 0 3.787-.597 4.801c-.598 1.015-1.674 1.58-3.825 2.709l-2 1.049C13.822 21.539 12.944 22 12 22s-1.822-.46-3.578-1.382l-2-1.05c-2.151-1.129-3.227-1.693-3.825-2.708C2 15.846 2 14.583 2 12.06v-.117c0-2.525 0-3.788.597-4.802c.598-1.015 1.674-1.58 3.825-2.708l2-1.05C10.178 2.461 11.056 2 12 2s1.822.46 3.578 1.382ZM21 7.5l-4 2M12 12L3 7.5m9 4.5v9.5m0-9.5l4.5-2.25l.5-.25m0 0V13m0-3.5l-9.5-5" />
+                                </svg>
+                                <a href="/orderpage/orderDelivered.html" class=" "> Orders</a>
+                            </div>
+                            <div class="flex items-center gap-4  hover:text-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="4"
+                                        d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8" />
+                                </svg>
+                                <a href="#" class=" hover:text-pink ">Wishlist (9)</a>
+                            </div>
+                            <div class="flex items-center gap-4  hover:text-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="m11.496 1.19l10.506.808l.808 10.505l-10.932 10.932L.564 12.121zm.764 2.064l-8.867 8.867l8.485 8.486l8.867-8.868l-.606-7.879zm3.86 4.624a1 1 0 1 0-1.414 1.414a1 1 0 0 0 1.414-1.414m-2.828-1.414a3 3 0 1 1 4.243 4.242a3 3 0 0 1-4.243-4.242" />
+                                </svg>
+                                <a href="#" class=" hover:text-pink ">Coupons</a>
+                            </div>
+                            <div class="flex items-center gap-4  hover:text-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                                    <path fill="currentColor"
+                                        d="M1 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2zm12 7a1 1 0 0 0 1-1V8H6.707l1.147 1.146a.5.5 0 1 1-.708.708L6 8.707V12zM7.915 7H14V5a1 1 0 0 0-1-1H6v1.085A1.5 1.5 0 0 1 7.915 7M6.5 7a.5.5 0 1 0-.5-.5V7zM5 5.085V4H3a1 1 0 0 0-1 1v2h1.085A1.5 1.5 0 0 1 5 5.085M4.5 7H5v-.5a.5.5 0 1 0-.5.5m-.207 1H2v3a1 1 0 0 0 1 1h2V8.707L3.854 9.854a.5.5 0 0 1-.708-.708z" />
+                                </svg>
+                                <a href="#" class=" hover:text-pink ">Gift Cards</a>
+                            </div>
+                            <div class="flex items-center gap-4  hover:text-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <g fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M6 19v-9a6 6 0 0 1 6-6v0a6 6 0 0 1 6 6v9M6 19h12M6 19H4m14 0h2m-9 3h2" />
+                                        <circle cx="12" cy="3" r="1" />
+                                    </g>
+                                </svg>
+                                <a href="#" class=" hover:text-pink ">Notifications</a>
+                            </div>
+                            <div class="flex items-center gap-4  hover:text-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="m17 8l-1.41 1.41L17.17 11H9v2h8.17l-1.58 1.58L17 16l4-4zM5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h7v-2H5z" />
+                                </svg>
+                                <a href="#" class=" hover:text-pink ">Logout</a>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- profile side bar div end -->
+                </div>
+            </div>
+    </div>
+    <!-- header div end -->
+  
+    
+    <!-- second header div start -->
+    <div class="flex flex-wrap items-center justify-between   bg-blue rounded-sm px-4 h-20">
+  
+  <div class="flex items-center gap-2 ">
+    <img class="w-10" src="../img/images/Ellipse 476 (2).png" alt="" id="open-sidebar2">
+    <p>Hello</p>
+  </div>
+  
+        <!-- serch and all categories div start -->
+        <div class="md:block  hidden">
+        <div class="dropdowndiv flex gap-1 items-center  ">
+  
+            <div class=" text-center">
+                <div x-data="
+           {
+           dropdownOpen: false
+           }
+           " @click.outside="dropdownOpen = false" class="relative  inline-block text-left border-b border-white">
+                    <button @click="dropdownOpen = !dropdownOpen"
+                        class=" flex items-center rounded-[5px] px-3 py-[13px] text-sm font-medium text-white">
+                        <img src="/imges/store.png" alt="" class="h-3 mr-2">
+                        My Orders
+  
+                    </button>
+                    <div :class="dropdownOpen ? 'top-full opacity-100 visible' : 'top-[110%] invisible opacity-0' "
+                        class="shadow-1 dark:shadow-box-dark absolute left-0 z-40 mt-2 w-full rounded-md text-white bg-[#00BAF2] dark:bg-dark-2 py-[10px] transition-all">
+                        <a href="javascript:void(0)"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                            Dashboard
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                            Settings
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                            Earnings
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+  
+            <div class=" text-center">
+                <div x-data="
+           {
+           dropdownOpen: false
+           }
+           " @click.outside="dropdownOpen = false" class="relative inline-block text-left border-b border-white">
+                    <button @click="dropdownOpen = !dropdownOpen"
+                        class=" flex items-center rounded-[5px] px-3 py-[13px] text-sm font-medium text-white">
+                        <span class="text-lg mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                                <path fill="currentColor"
+                                    d="M230.93 220a8 8 0 0 1-6.93 4H32a8 8 0 0 1-6.92-12c15.23-26.33 38.7-45.21 66.09-54.16a72 72 0 1 1 73.66 0c27.39 8.95 50.86 27.83 66.09 54.16a8 8 0 0 1 .01 8"
+                                    class="" />
+                            </svg>
+                        </span>
+                        Account Settings
+  
+                    </button>
+                    <div :class="dropdownOpen ? 'top-full opacity-100 visible' : 'top-[110%] invisible opacity-0' "
+                        class="shadow-1 dark:shadow-box-dark absolute left-0 z-40 mt-2 w-full rounded-md bg-[#00BAF2] dark:bg-dark-2 py-[10px] transition-all text-white">
+                        <a href="/profilepage.html"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                            Profile page
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                            Manage Addresses
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-xs">
+                            PAN Card Information
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+  
+                        </a>
+                    </div>
+                </div>
+            </div>
+  
+            <div class=" text-center">
+                <div x-data="
+           {
+           dropdownOpen: false
+           }
+           " @click.outside="dropdownOpen = false" class="relative  inline-block text-left border-b border-white">
+                    <button @click="dropdownOpen = !dropdownOpen"
+                        class=" flex items-center rounded-[5px] px-3 py-[13px] text-sm font-medium text-white">
+                        <span class="text-lg mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                                <g fill="none" stroke="currentColor" stroke-width="4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.982 11.969L31.785 4l4.612 7.989z" clip-rule="evenodd" />
+                                    <path stroke-linejoin="round"
+                                        d="M4 14a2 2 0 0 1 2-2h36a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+                                    <path stroke-linejoin="round"
+                                        d="M35.25 33H44V23h-8.75c-2.9 0-5.25 2.239-5.25 5s2.35 5 5.25 5Z" />
+                                    <path stroke-linecap="round" d="M44 16.5v24" />
+                                </g>
+                            </svg>
+                        </span>
+  
+  
+                        Payments
+  
+                    </button>
+                    <div :class="dropdownOpen ? 'top-full opacity-100 visible' : 'top-[110%] invisible opacity-0' "
+                        class="shadow-1 dark:shadow-box-dark absolute left-0 z-40 mt-2 text-white w-full rounded-md bg-[#00BAF2] dark:bg-dark-2 py-[10px] transition-all">
+                        <a href="/Payment/paymentGiftCard.html "
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                            Gift cards
+                        </a>
+                        <a href="/Payment/PaymentSavedUPI.html "
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                            Saved UPI
+                        </a>
+                        <a href="/Payment/PaymentSavedCard.html"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm text-nowrap">
+                            Saved Cards
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+  
+                        </a>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="py-5 text-center">
+                <div x-data="
+           {
+           dropdownOpen: false
+           }
+           " @click.outside="dropdownOpen = false" class="relative  inline-block text-left border-b border-white">
+                    <button @click="dropdownOpen = !dropdownOpen"
+                        class=" flex items-center rounded-[5px] px-3 py-[13px] text-sm font-medium text-white">
+                        <img src="/imges/Vector (2).png" alt="" class="h-3 mr-2">
+                        My Stuff
+  
+                    </button>
+                    <div :class="dropdownOpen ? 'top-full opacity-100 visible' : 'top-[110%] invisible opacity-0' "
+                        class="shadow-1 dark:shadow-box-dark absolute left-0 z-40 mt-2 w-auto text-white rounded-md bg-[#00BAF2] dark:bg-dark-2 py-[10px] transition-all">
+                        <a href="/MyStuff/myCoupon.html"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                            My Coupons
+                        </a>
+                        <a href="/MyStuff/MyReview&Rating.html"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm whitespace-nowrap">
+                            My Reviews & Ratings
+                        </a>
+                        <a href="/MyStuff/AllNotification.html"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm whitespace-nowrap">
+                            All Notifications
+                        </a>
+                        <a href="/MyStuff/MyWishList.html"
+                            class="text-body-color dark:text-dark-6 hover:shadow-sm dark:hover:bg-primary/5 hover:text-primary block px-5 py-2 text-sm">
+                            My Wishlist
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+        <!-- serch and all categories div end -->
+  
+        <div class="text-blue flex gap-1 items-center bg-white px-4 py-1 rounded-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024"><path fill="#00BAF2" d="M868 732h-70.3c-4.8 0-9.3 2.1-12.3 5.8c-7 8.5-14.5 16.7-22.4 24.5a353.84 353.84 0 0 1-112.7 75.9A352.8 352.8 0 0 1 512.4 866c-47.9 0-94.3-9.4-137.9-27.8a353.84 353.84 0 0 1-112.7-75.9a353.28 353.28 0 0 1-76-112.5C167.3 606.2 158 559.9 158 512s9.4-94.2 27.8-137.8c17.8-42.1 43.4-80 76-112.5s70.5-58.1 112.7-75.9c43.6-18.4 90-27.8 137.9-27.8c47.9 0 94.3 9.3 137.9 27.8c42.2 17.8 80.1 43.4 112.7 75.9c7.9 7.9 15.3 16.1 22.4 24.5c3 3.7 7.6 5.8 12.3 5.8H868c6.3 0 10.2-7 6.7-12.3C798 160.5 663.8 81.6 511.3 82C271.7 82.6 79.6 277.1 82 516.4C84.4 751.9 276.2 942 512.4 942c152.1 0 285.7-78.8 362.3-197.7c3.4-5.3-.4-12.3-6.7-12.3m88.9-226.3L815 393.7c-5.3-4.2-13-.4-13 6.3v76H488c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h314v76c0 6.7 7.8 10.5 13 6.3l141.9-112a8 8 0 0 0 0-12.6"/></svg>
+            <button>Logout</button>
+        </div>
+  
+    </div>
+    <!-- second header end -->
+
+
+    <!-- main content div  start -->
+  <div class="mx-6">
+
+
+
+     <!-- serch and all categories div start -->
+     <div class=" flex shadow-md mt-4 relative bg-white md:w-96 text-xs  h-10 rounded-sm justify-center mx-auto">
+        <select name="" id="" class="border-0 sm:text-xs focus:ring-0 rounded-md ">
+          <option value="">All categories</option>
+        </select>
+        <input type="text" placeholder="search for items..." class=" text-xs border-0  focus:ring-0	" />
+        <svg class="absolute right-2 top-3" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+          viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="6" />
+            <path stroke-linecap="round" d="m20 20l-3-3" />
+          </g>
+        </svg>
+    
+      </div>
+            <!-- serch and all categories div end -->
+
+<div class="flex gap-4 mt-4">
+
+<div class="sm:w-72 w-32">
+    <div class="border pb-4 ">
+    <h3 class="font-bold  text-xl p-2" >Filters</h3>
+    <h3 class="border-t font-semibold text-xl p-2">CATEGORIES</h3>
+    <h4 class="text-darkblue font-semibold p-2">Men’s Shirts</h4>
+    <ul class="flex flex-col  ml-6 ">
+        <li class="hover:bg-blue inline w-fit py-1 px-2 rounded-md hover:text-white  ">Casual Shirts</li>
+        <li class="hover:bg-blue inline w-fit py-1 px-2 rounded-md hover:text-white  ">Formal Shirts</li>
+        <li class="hover:bg-blue inline w-fit py-1 px-2 rounded-md hover:text-white  ">Printed Shirts</li>
+    </ul>
+</div>
+
+<div class="flex flex-col w-full bg-lightlevendar p-4 gap-4 text-grey font-semibold">
+    <select name="" id="" class="border-0 focus:ring-0  ">
+        <option value="">Gender</option>
+    </select>
+    <select name="" id="" class="border-0 focus:ring-0  ">
+        <option value="">Fabric</option>
+    </select>
+    <select name="" id="" class="border-0 focus:ring-0  ">
+        <option value="">Color</option>
+    </select>
+    <select name="" id="" class="border-0 focus:ring-0  ">
+        <option value="">Smartcoins</option>
+    </select>
+    <select name="" id="" class="border-0 focus:ring-0  ">
+        <option value="">Discount</option>
+    </select>
+    <select name="" id="" class="border-0 focus:ring-0  ">
+        <option value="">Size</option>
+    </select>
+    <select name="" id="" class="border-0 focus:ring-0  ">
+        <option value="">Combo</option>
+    </select>
+</div>
+</div>
+ 
+    
+
+    
+<div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+
+    <div class=" bg-lightlevendar overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full">
+        <div class="relative  m-4 rounded-md ">
+        <img
+          alt=""
+          src="../img/electronicimg/Rectangle 4463.png"
+          class="mx-auto peer "
+        />
+        
+        </div>
+    
+      
+        <div class="px-4">
+          <h3 class="font-semibold text-grey">Formal Shirts For Mens</h3>
+             <p class="font-semibold text-grey">Pattern : Solid  </p>
+             <div class="flex justify-between">
+                <p class="font-bold">₹249</p>
+                <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64"><path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/></svg>
+                <span>4.5</span></p>
+             </div>
+        </div>
+      </div>
+      <div class=" bg-lightlevendar  overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full">
+        <div class="relative m-4 rounded-md ">
+        <img
+          alt=""
+          src="../img/electronicimg/Rectangle 4465.png"
+          class="mx-auto peer "
+        />
+       
+        </div>
+    
+      
+        <div class=" px-4">
+          <h3 class="font-semibold text-grey">Formal Shirts For Mens</h3>
+             <p class="font-semibold text-grey">Pattern : Solid  </p>
+             <div class="flex justify-between">
+                <p class="font-bold">₹249</p>
+                <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64"><path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/></svg>
+                    <span>4.5</span></p>
+             </div>
+        </div>
+      </div>
+      <div class="bg-lightlevendar overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full">
+        <div class="  m-4 rounded-md ">
+        <img
+          alt=""
+          src="../img/electronicimg/Rectangle 4467.png"
+          class="mx-auto peer "
+        />
+       
+        </div>
+    
+      
+        <div class=" px-4 pb-2">
+          <h3 class="font-semibold text-grey">Formal Shirts For Mens</h3>
+             <p class="font-semibold text-grey">Pattern : Solid  </p>
+             <div class="flex justify-between">
+                <p class="font-bold">₹249</p>
+                 <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64"><path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/></svg>
+                <span>4.5</span></p>
+             </div>
+        </div>
+      </div>
+    <div class=" bg-lightlevendar overflow-hidden rounded-lg shadow  hover:shadow-lg w-full">
+        <div class=" m-4 rounded-md ">
+        <img
+          alt=""
+          src="../img/electronicimg/Rectangle 4472.png"
+          class="mx-auto peer "
+        />
+        
+        </div>
+    
+      
+        <div class=" px-4 pb-2">
+          <h3 class="font-semibold text-grey">Formal Shirts For Mens</h3>
+             <p class="font-semibold text-grey">Pattern : Solid  </p>
+             <div class="flex justify-between">
+                <p class="font-bold">₹249</p>
+                 <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64"><path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/></svg>
+                <span>4.5</span></p>
+             </div>
+        </div>
+      </div>
+      <div class=" bg-lightlevendar overflow-hidden rounded-lg shadow  hover:shadow-lg w-full">
+        <div class="  m-4 rounded-md ">
+        <img
+          alt=""
+          src="../img/electronicimg/Rectangle 4473.png"
+          class="mx-auto  "
+        />
+       
+        </div>
+    
+      
+        <div class=" px-4 pb-2">
+          <h3 class="font-semibold text-grey">Formal Shirts For Mens</h3>
+             <p class="font-semibold text-grey">Pattern : Solid  </p>
+             <div class="flex justify-between">
+                <p class="font-bold">₹249</p>
+                 <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64"><path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/></svg>
+                <span>4.5</span></p>
+             </div>
+        </div>
+      </div>
+      <div class=" bg-lightlevendar  overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full">
+        <div class="relative m-4 rounded-md ">
+        <img
+          alt=""
+          src="../img/electronicimg/Rectangle 4474.png"
+          class="mx-auto peer "
+        />
+        
+        </div>
+    
+    <div class=" px-4 pb-2">
+          <h3 class="font-semibold text-grey">Formal Shirts For Mens</h3>
+             <p class="font-semibold text-grey">Pattern : Solid  </p>
+             <div class="flex justify-between">
+                <p class="font-bold">₹249</p>
+                 <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64"><path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/></svg>
+                <span>4.5</span></p>
+             </div>
+        </div>
+      </div>
+    
+     
+     
+    
+    </div>
+
+        
+</div>
+
+
+  </div>
+
+
+
+  
+
+    <!-- main content div end -->
+
+
+
+    <!-- footer div start -->
+    <div class="  mt-10">
+
+        <footer class="p-4 bg-[#0163D2]  sm:p-6 dark:bg-gray-800">
+            <div class="md:flex md:justify-start md:items-center">
+
+                <div
+                    class="grid md:grid-cols-2 text-center md:text-left  grid-row-2 md:grid-rows-1 gap-8 sm:gap-6 xl:grid-cols-8   sm:gap-x-32">
+                    <div class="whitespace-nowrap">
+                        <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">About</h3>
+                        <ul>
+                            <div class="space-y-2 text-[.625rem] md:text-sm">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">About Us </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">Flipkart Stories</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">Press</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">Super Duper Wholesale</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="nofollow"
+                                        class="text-white hover:underline dark:text-gray-400">Corporate Information</a>
+                                </li>
+                            </div>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Help</h3>
+                        <ul>
+                            <div class="space-y-2 text-[.625rem] md:text-sm whitespace-nowrap">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Payments</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Shipping</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Cancellation &
+                                        Returns</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Report
+                                        Infringement</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white whitespace-nowrap">
+                            CONSUMER
+                            POLICY</h3>
+                        <ul>
+                            <div class="space-y-2 text-[.625rem] md:text-sm whitespace-nowrap">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Return Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Terms
+                                        &amp; Conditions</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Security</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Privacy</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Sitemap</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Grievance
+                                        Redressal</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">EPR
+                                        Compliance</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="after:relative	">
+                        <h3
+                            class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white after:content-[''] after:border-r-2 after:border-white after:py-40 after:absolute after:right-[52%] after:hidden xl:after:block">
+                            SOCIAL</h3>
+                        <ul>
+                            <div class="space-y-2 text-[.625rem] md:text-sm">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Twitter</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">YouTube</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="xl:translate-x-[-3.125rem] ">
+                        <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Company</h3>
+                        <ul>
+                            <div class="space-y-2 whitespace-nowrap  text-[.625rem] md:text-sm">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Super Duper
+                                        Internet Private Limited</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Buildings Alyssa,
+                                        Begonia & Clove Embassy Tech Village</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Outer Ring Road,
+                                        Devarabeesanahalli Village</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Bengaluru,
+                                        560103</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Karnataka,
+                                        India</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class=" xl:ml-32 	">
+                        <h3 class="mb-6 text-sm font-semibold text-white uppercase  dark:text-white">Company</h3>
+                        <ul>
+                            <div class="space-y-2 whitespace-nowrap  text-[.625rem] md:text-sm">
+                                <li class="">
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">FacebSuper Duper
+                                        Internet Private <br> Limitedook</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Buildings Alyssa,
+                                        Begonia &</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Clove Embassy
+                                        Tech Village</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Outer Ring Road,
+                                        Devarabeesanahalli Village</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Bengaluru,
+                                        560103</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">Karnataka,
+                                        India</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">CIN :
+                                        U51109KA2012PTC066107</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="text-white hover:underline dark:text-gray-400">textephone:
+                                        044-45614700</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <hr class="my-6 border-gray-200 sm:mx-auto  dark:border-gray-700 lg:mt-20">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <div
+                    class="spandivfooter text-white flex md:gap-3 items-center xl:text-lg text-sm pl-2 flex-col gap-4 sm:grid sm:grid-cols-1 md:grid-cols-2  sm:place-items-start sm:whitespace-nowrap lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-6 md:gap-x-[32px]">
+                    <span class="">
+                        <i class="fa-solid fa-suitcase scale-125 mr-2" style="color: #FFD43B;"></i>
+                        Become a Seller </span>
+                    <span class="flex gap-2 items-center justify-center">
+                        <img src="./imges/starimage.png" class=" w-5" alt="">
+                        Advertise </span>
+                    <span class="flex gap-2 items-center">
+                        <img src="./imges/giftimage.png" alt="">
+                        Gift Cards
+                    </span>
+                    <span class="flex gap-2 items-center">
+                        <img src="./imges/questionimage.png" class="w-5" alt="">
+                        Help Center
+                    </span>
+                </div>
+                <div
+                    class="smallimagediv flex md:gap-8 items-center flex-col gap-4 sm:flex-row lg:flex-col lg:w-[50%] xl:flex-row">
+                    <span class="text-white text-sm xl:text-[16px] sm:text-center">© 2007-2023 Superduper.com</span>
+
+                    <div class="imagedivnew">
+                        <img src="./imges/ATMimages.png" class="w-80" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- footer div end -->
+
+
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+
+        const maincontent = document.getElementById('main-content');
+        const openSidebarButton = document.getElementById('open-sidebar');
+        openSidebarButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sidebar.classList.toggle('-translate-x-full');
+            maincontent.style.position = 'fixed';
+        });
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
+                sidebar.classList.add('-translate-x-full');
+                maincontent.style.position = 'static';
+            }
+        });
+
+
+        // second header side barscript start
+        const secondHeaderSidebar = document.getElementById('secondHeaderSidebar');
+
+
+        const openSidebarButton2 = document.getElementById('open-sidebar2');
+        openSidebarButton2.addEventListener('click', (e) => {
+            e.stopPropagation();
+            secondHeaderSidebar.classList.toggle('-translate-x-full');
+
+        });
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!secondHeaderSidebar.contains(e.target) && !openSidebarButton2.contains(e.target)) {
+                secondHeaderSidebar.classList.add('-translate-x-full');
+
+            }
+        });
+
+
+        // person profile
+        const navsidepage = document.getElementById('navsidepage');
+        const profile = document.getElementById('profile');
+
+
+        profile.addEventListener('click', (e) => {
+
+
+            if (navsidepage.style.display == "block") {
+                navsidepage.style.display = "none";
+            }
+            else {
+                navsidepage.style.display = "block";
+
+            }
+
+        });
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!navsidepage.contains(e.target) && !profile.contains(e.target)) {
+
+                navsidepage.style.display = "none";
+
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

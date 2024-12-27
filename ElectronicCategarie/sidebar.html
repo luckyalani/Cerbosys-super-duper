@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select with Checkbox</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      clifford: '#da373d',
+                      darkblue: '#0163D2',
+                      darkdarkblue: '#073B74',
+                      blue: '#00BAF2',
+                      lightblue: '#B4D7FF',
+                      lightgrey: '#F6F6F6',
+                      yellow: '#F1E64E',
+                      pink: '#F74B81',
+                      grey: '#bbb',
+                      darkgrey: '#717171',
+                      black: '#000',
+                      orange: '#F59758',
+                      lightPink: '#FFEFF4',
+
+
+                      lightlevendar: '#EFEFEF',
+                      lightblack: '#C3C3C3',
+                      green: '#00C14D',
+                      tan:'#FFEFB5',
+
+
+                  },
+                  backgroundImage: {
+                      "bg1venderList": "url('./homeimg/Group 338363.png')",
+                  }
+
+              }
+          }
+      }
+  </script>
+</head>
+<body class="mx-10">
+<div class="shadow-md px-4 py-4">
+  <strong>Select Language:</strong>
+  <div class="dropdown" id="dropdown">
+    <button onclick="toggleDropdown()" class="btn btn-secondary flex items-center gap-20 bg-lightlevendar py-2 px-2 rounded-sm ">
+    <span>Select</span>
+    <svg id="svgicon" class="" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024"><path fill="black" d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0"/></svg></button>
+    <div class="dropdown-content flex flex-col gap-1" id="dropdown-content">
+      <label class="flex gap-4 items-center"><input type="checkbox" value="php"><span>PHP</span></label>
+      <label class="flex gap-4 items-center"><input type="checkbox" value="php"><span>PHP</span></label>
+      <label class="flex gap-4 items-center"><input type="checkbox" value="php"><span>PHP</span></label>
+      <label class="flex gap-4 items-center"><input type="checkbox" value="php"><span>PHP</span></label>
+      
+    </div>
+  </div>
+</div>
+<script>
+  function toggleDropdown() {
+    var dropdownContent = document.getElementById("dropdown-content");
+    var svgicon = document.getElementById("svgicon");
+    if (dropdownContent.style.display === "flex") {
+      dropdownContent.style.display = "none";
+      svgicon.style.transform = " rotate(90deg)";
+      
+    } else {
+      dropdownContent.style.display = "flex";
+      svgicon.style.transform = " rotate(0deg)";
+    }
+  }
+</script>
+</body>
+</html>
